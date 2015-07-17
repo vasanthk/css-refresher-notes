@@ -4,13 +4,15 @@
 
 CSS Position allows up to 5 different values. But essentially only 4 values are commonly used.
 
-```div {
+```css
+div {
   position: static; /* default */
   position: relative;
   position: absolute;
   position: fixed;
   position: inherit; /* Not very common */ 
-}```
+}
+```
 
 ###Static (default):
 * The only reason you would ever set an element to position: static is to forcefully-remove some positioning that got applied to an element outside of your control. This is fairly rare, as positioning doesn't cascade.
@@ -34,8 +36,8 @@ CSS Position allows up to 5 different values. But essentially only 4 values are 
 ###Inherits:
 * It works as the name implies: The element inherits the value of its parent element. Typically, position property elements do not naturally inherit their parent’s values—the static value is assigned if no position value is given. Ultimately, you can type inherit or the parent element’s value and get the same result.
 
-Links:
-
+####More reading:
 http://alistapart.com/article/css-positioning-101
 
 http://www.barelyfitz.com/screencast/html-training/css/positioning/
+
