@@ -36,6 +36,10 @@ div {
 **Inherits:**
 * It works as the name implies: The element inherits the value of its parent element. Typically, position property elements do not naturally inherit their parent’s values—the static value is assigned if no position value is given. Ultimately, you can type inherit or the parent element’s value and get the same result.
 
+**Gotchas:**
+* You can’t apply both the position property and the float property to the same element. Both are conflicting instructions for what positioning scheme to use. If you add both to the same element expect the one that appears last in your css code to be the one that’s used.
+* Margins don’t collapse on absolutely positioned elements. Suppose you have a paragraph with a margin-bottom of 20px applied. Right below the paragraph is an image with a margin-top of 30px applied. The space between the paragraph and the image will not be 50px (20px + 30px), but rather 30px (30px > 20px). This is known as collapsing margins. The two margins combine (or collapse) to become one margin. Absolutely positioned elements do not have margins that collapse, which might make them act differently than expected.
+
 *More reading:*
 
 http://alistapart.com/article/css-positioning-101
