@@ -42,6 +42,8 @@ div {
 
 *More reading:*
 
+https://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/
+
 http://alistapart.com/article/css-positioning-101
 
 http://www.barelyfitz.com/screencast/html-training/css/positioning/
