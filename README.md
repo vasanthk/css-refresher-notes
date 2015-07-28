@@ -49,15 +49,15 @@ http://alistapart.com/article/css-positioning-101
 http://www.barelyfitz.com/screencast/html-training/css/positioning/
 
 ##Display
-Every element on a web page is a rectangualr box. The display property in CSS determines just how that rectangular box behaves.
+Every element on a web page is a rectangular box. The display property in CSS determines just how that rectangular box behaves.
 
 ```css
 div {
-	display: inline;		// Default of all elements, unless UA stylesheet overrides
-	display: inline-block;	// Characteristics of a block, but sits on a line
-	display: block;			// UA stylesheet makes things like <div> and <section> block
-	display: run-in;		// Not particularly well supported or common
-	display: none;			// Hide
+	display: inline;
+	display: inline-block;
+	display: block;
+	display: run-in;
+	display: none;
 }
 
 ```
