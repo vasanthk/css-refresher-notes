@@ -151,6 +151,20 @@ Note that the overflow property was not intended for this type of use, and could
 * Note that overflow: auto doesn't clear floats — it causes the element to contain its floats by way of establishing a new block formatting context for them so that they don't intrude to other elements in the parent context.
 That is what forces the parent to stretch to contain them. You can only clear a float if you add a clearing element after the float. A parent element cannot clear its floating children.
 
+*Gotchas*
+```html
+<img src="http://lorempixum.com/200/200/">
+<p>Lorem ipsum...</p>
+```
+```css
+img {
+  float: right;
+  margin: 20px;
+}
+```
+
+Any margin that we add to the paragraph is being applied way off to the right of the image. This is because the image is actually inside of the paragraph’s box! This is why it doesn’t increase the space between the image and the paragraph.
+
 *More reading:*
 
 http://alistapart.com/article/css-floats-101
