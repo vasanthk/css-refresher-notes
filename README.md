@@ -187,6 +187,8 @@ Any margin that we add to the paragraph is being applied way off to the right of
 
 *More reading:*
 
+http://designshack.net/articles/css/everything-you-never-knew-about-css-floats/
+
 http://alistapart.com/article/css-floats-101
 
 ---
