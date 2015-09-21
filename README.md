@@ -151,6 +151,26 @@ Note that the overflow property was not intended for this type of use, and could
 * Note that overflow: auto doesn't clear floats — it causes the element to contain its floats by way of establishing a new block formatting context for them so that they don't intrude to other elements in the parent context.
 That is what forces the parent to stretch to contain them. You can only clear a float if you add a clearing element after the float. A parent element cannot clear its floating children.
 
+**9 Rules governing Floats**
+
+1. Floated elements are pushed to the edge of their containers, no further.
+
+2. Any floated element will either appear next to or below a previous floated element. If the elements are floated left, the second element will appear to the right of the first. If they’re floated right, the second element will appear to the left of the first.
+
+3. A left-floating box can't be further right than a right-floating box.
+
+4. Floated elements can't go higher than their container’s top edge (this gets more complicated when collapsing margins are involved, see original rule).
+
+5. A floated element can't be higher than a previous block level or floated element.
+
+6. A floated element can't be higher than a previous line of inline elements.
+
+7. One floated element next to another floated element can’t stick out past the edge of its container.
+
+8. A floating box must be placed as high as possible.
+
+9. A left-floating box must be put as far to the left as possible, a right-floating box as far to the right as possible. A higher position is preferred over one that is further to the left/right.
+
 **Gotchas**
 ```html
 <img src="http://lorempixum.com/200/200/">
