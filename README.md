@@ -154,3 +154,9 @@ That is what forces the parent to stretch to contain them. You can only clear a 
 *More reading:*
 
 http://alistapart.com/article/css-floats-101
+
+---
+
+*Links*
+
+http://designshack.net/articles/css/5-steps-to-drastically-improve-your-css-knowledge-in-24-hours/
