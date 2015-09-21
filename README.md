@@ -32,6 +32,7 @@ div {
 * Similar to position absolute, an element that has fixed position is taken out of the document flow.
 * The element is positioned relative to the viewport, or the browser window itself.
 * Major difference with position absolute is it always takes its positioning relative to the browser window.
+* Since the fixed value behaves similar to the absolute value, we can stretch the width of the element to fit the viewport by setting offset values for left and right to zero.
 
 **Inherits:**
 * It works as the name implies: The element inherits the value of its parent element. Typically, position property elements do not naturally inherit their parent’s values—the static value is assigned if no position value is given. Ultimately, you can type inherit or the parent element’s value and get the same result.
