@@ -18,7 +18,7 @@ div {
 * The only reason you would ever set an element to position: static is to forcefully-remove some positioning that got applied to an element outside of your control. This is fairly rare, as positioning doesn't cascade.
 
 **Relative:**
-* Allows nudging elements in different directions with top, right, bottom and left values.
+* Allows nudging elements in different directions with top, right, bottom and left values. Its starting point is where it normally lies in the flow of the document, not the top left of the page. 
 * When set to position relative, elements take up the same amount of space at the same exact position it was supposed to take as if its position was static.
 * It introduces the ability to use z-index on that element, which doesn't really work with statically positioned elements. Even if you don't set a z-index value, this element will now appear on top of any other statically positioned element. 
 * It limits the scope of absolutely positioned child elements. Any element that is a child of the relatively positioned element can be absolutely positioned within that block. 
