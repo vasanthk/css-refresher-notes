@@ -151,7 +151,7 @@ Note that the overflow property was not intended for this type of use, and could
 * Note that overflow: auto doesn't clear floats — it causes the element to contain its floats by way of establishing a new block formatting context for them so that they don't intrude to other elements in the parent context.
 That is what forces the parent to stretch to contain them. You can only clear a float if you add a clearing element after the float. A parent element cannot clear its floating children.
 
-*Gotchas*
+**Gotchas**
 ```html
 <img src="http://lorempixum.com/200/200/">
 <p>Lorem ipsum...</p>
