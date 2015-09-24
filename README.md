@@ -317,8 +317,9 @@ box-shadow: 1px 1px 3px #292929;
 ```
 
 box-shadow accepts four parameters: x-offset, y-offset, blur, color of shadow.
+text-shadow has the same set of properties as well.
 
-It allows you to immediately apply depth to your elements.
+It allows you to immediately apply depth to your elements. We can apply multiple shadows by using comma as a separator.
 
 ---
 
