@@ -1,6 +1,6 @@
 # CSS Refresher Notes
 
-##Positioning:
+##Positioning
 
 CSS Position allows up to 5 different values. But essentially only 4 values are commonly used.
 
