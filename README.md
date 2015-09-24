@@ -193,6 +193,58 @@ http://designshack.net/articles/css/everything-you-never-knew-about-css-floats/
 
 http://alistapart.com/article/css-floats-101
 
+## CSS Selectors
+
+```css
+div#container > ul {
+  border: 1px solid black;
+} 
+```
+
+The difference between the standard X Y and X > Y is that the latter will only select direct children.
+
+```css
+ul ~ p {
+   color: red;
+}
+```
+
+This sibling combinator is similar to X + Y, however, it's less strict. While an adjacent selector (ul + p) will only select the first element that is immediately preceded by the former selector, this one is more generalized. 
+It will select, referring to our example above, any p elements, as long as they follow a ul.
+
+```css
+a[href*="google"] {
+  color: #1f6053;
+}
+```
+
+The star designates that the proceeding value must appear somewhere in the attribute's value.
+
+```css
+a[href^="http"] {
+   background: url(path/to/external/icon.png) no-repeat;
+   padding-left: 10px;
+}
+```
+
+If we want to target all anchor tags that have a href which begins with http, we could use a selector similar to the snippet shown above.
+
+```css
+a[href$=".jpg"] {
+   color: red;
+}
+```
+
+Again, we use a regular expressions symbol, $, to refer to the end of a string. In this case, we're searching for all anchors which link to an image -- or at least a url that ends with .jpg
+
+```css
+a[data-info~="image"] {
+   border: 1px solid black;
+}
+```
+
+The tilda (~) symbol allows us to target an attribute which has a spaced-separated list of values.
+
 ---
 
 *Links*
