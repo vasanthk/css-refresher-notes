@@ -138,7 +138,7 @@ https://css-tricks.com/almanac/properties/d/display/
 
 http://learnlayout.com/display.html
 
-## Floats:
+## Floats
 * Floated elements are first laid out according to the normal flow, then taken out of the normal flow and sent as far to the right or left (depending on which value is applied) of the parent element. 
 In other words, they go from stacking on top of each other to sitting next to each other, given that there is enough room in the parent element for each floated element to sit.
 * Generally, a floated element should have an explicitly set width (unless it is a replaced element, like an image). This ensures that the float behaves as expected and helps to avoid issues in certain browsers.
