@@ -295,6 +295,31 @@ This is particularly useful when assigning border and padding/margin styles for 
 
 http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048
 
+## CSS3 Properties
+
+**border-radius**
+
+```css
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+```
+
+Allows rounded corners in elements. Can also be used to create circles.
+Support: IE9+
+
+**box-shadow**
+
+```css
+-webkit-box-shadow: 1px 1px 3px #292929;
+-moz-box-shadow: 1px 1px 3px #292929;
+box-shadow: 1px 1px 3px #292929;
+```
+
+box-shadow accepts four parameters: x-offset, y-offset, blur, color of shadow.
+
+It allows you to immediately apply depth to your elements.
+
 ---
 
 *Links*
