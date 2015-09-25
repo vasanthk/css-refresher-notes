@@ -357,7 +357,32 @@ Normal reflows may affect the whole document. The more of the document that is r
 
 So is an animation does not need to be applied to the whole document, it is better if it can be applied only to a positioned element. For most animations, this is all that is needed anyway.
 
+*What causes a reflow*
+
+* Resizing a window.
+* Changing the font.
+* Adding or removing a stylesheet.
+* Content changes, such as a user typing text in an input box.
+* Activation of CSS pseudo classes such as :hover (In IE the activation of the pseudo class of a sibling).
+* Manipulating the class attribute.
+* A script manipulating the DOM
+* Calculating offsetWidth and offsetHeight
+* Setting a property of the style attribute.
+
 For a comprehensive list of what forces reflows - check Paul Irish's gist [here](https://gist.github.com/paulirish/5d52fb081b3570c81e3a)
+
+*How to minimize the effect of reflows on performance*
+
+* Change classes on the element you wish to styles (as low in the DOM tree as possible).
+* Avoid setting multiple inline styles.
+* Apply animations to elements that are position fixed or absolute.
+* Trade smoothness for speed.
+* Avoid tables for layout. Even a minor change to a cell will cause reflows on all other nodes of the table.
+* Avoid JavaScript expressions in the CSS (IE only).
+
+*More Reading*
+
+http://www.stubbornella.org/content/2009/03/27/reflows-repaints-css-performance-making-your-javascript-slow/
 
 ---
 
