@@ -321,6 +321,24 @@ text-shadow has the same set of properties as well.
 
 It allows you to immediately apply depth to your elements. We can apply multiple shadows by using comma as a separator.
 
+### Selector efficiency
+
+Below is the order of efficiency for selectors. IDs are the most efficient and pseudo classes and pseudo elements are the least efficient.
+
+* id (#myid)
+* class (.myclass)
+* tag (div, h1, p)
+* adjacent sibling (h1 + p)
+* child (ul > li)
+* descendent (li a)
+* universal (*)
+* attribute (a[rel=”external”])
+* pseudo-class and pseudo element (a:hover, li:first)
+
+*More Reading*
+
+http://vanseodesign.com/css/css-selector-performance/
+
 ---
 
 *Links*
