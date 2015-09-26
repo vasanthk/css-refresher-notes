@@ -384,6 +384,10 @@ For a comprehensive list of what forces reflows - check Paul Irish's gist [here]
 
 http://www.stubbornella.org/content/2009/03/27/reflows-repaints-css-performance-making-your-javascript-slow/
 
+http://csswizardry.com/2011/09/writing-efficient-css-selectors/
+
+http://stackoverflow.com/questions/5797014/why-do-browsers-match-css-selectors-from-right-to-left
+
 ---
 
 *Links*
