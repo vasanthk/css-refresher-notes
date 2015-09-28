@@ -316,6 +316,8 @@ Support: IE9+
 box-shadow: 1px 1px 3px #292929;
 ```
 
+The box-shadow property allows designers to easily implement multiple drop shadows (outer or inner) on box elements, specifying values for color, size, blur and offset.
+
 box-shadow accepts four parameters: x-offset, y-offset, blur, color of shadow.
 text-shadow has the same set of properties as well.
 
