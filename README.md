@@ -380,6 +380,11 @@ For a comprehensive list of what forces reflows - check Paul Irish's gist [here]
 * Avoid tables for layout. Even a minor change to a cell will cause reflows on all other nodes of the table.
 * Avoid JavaScript expressions in the CSS (IE only).
 
+*Note*
+ 
+* Sweating over the selectors used in modern browsers is futile; most selection methods are now so fast it’s really not worth spending much time over. Furthermore, there is disparity across browsers of what the slowest selectors are anyway. Look here last to speed up your CSS.
+* Excessive unused styles are likely to cost more, performance wise, than any selectors you chose so look to tidy up there second. 3000 lines that are unused or surplus on a page are not even that uncommon. While it’s common to bunch all the styles up into a great big single styles.css, if different areas of your site/web application can have different (additional) stylesheets added (dependency graph style), that may be the better option. 
+
 *More Reading*
 
 http://www.stubbornella.org/content/2009/03/27/reflows-repaints-css-performance-making-your-javascript-slow/
@@ -387,6 +392,8 @@ http://www.stubbornella.org/content/2009/03/27/reflows-repaints-css-performance-
 http://csswizardry.com/2011/09/writing-efficient-css-selectors/
 
 http://stackoverflow.com/questions/5797014/why-do-browsers-match-css-selectors-from-right-to-left
+
+http://benfrain.com/css-performance-revisited-selectors-bloat-expensive-styles/
 
 ---
 
