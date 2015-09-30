@@ -306,7 +306,8 @@ border-radius: 4px;
 ```
 
 Allows rounded corners in elements. Can also be used to create circles.
-Support: IE9+
+
+*Support: IE9+*
 
 **box-shadow**
 
@@ -327,11 +328,17 @@ box-shadow accepts four parameters: x-offset, y-offset, blur, color of shadow.
 
 An optional ‘inset’ keyword can be supplied, preceding the length and color values. If present, this keyword causes the shadow to be drawn inside the element.
 
+```css
+-webkit-box-shadow: 0 0 20px #333 inset;
+-moz-box-shadow: 0 0 20px #333 inset;
+box-shadow: 0 0 20px #333 inset;
+```
+
 text-shadow has the same set of properties as well.
 
 It allows you to immediately apply depth to your elements. We can apply multiple shadows by using comma as a separator.
 
-Support: IE9+
+*Support: IE9+*
 
 *More reading:*
 
