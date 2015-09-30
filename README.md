@@ -484,9 +484,7 @@ You can also declare where you want any particular color to "start". Those are c
 
 ***Gotchas***
 
-* We tend to think of gradients as fading colors, but if you have two color stops that are the same, you can make a solid color instantly change to another solid color. This can be useful for declaring a full-height background that simulates columns.
-
-http://codepen.io/chriscoyier/pen/csgoD
+* We tend to think of gradients as fading colors, but if you have two color stops that are the same, [you can make a solid color instantly change to another solid color](http://codepen.io/chriscoyier/pen/csgoD). This can be useful for declaring a full-height background that simulates columns.
 
 * There are three different syntaxes that browsers have supported:
   
