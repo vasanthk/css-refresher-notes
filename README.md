@@ -463,6 +463,8 @@ Gradients are typically one color that fades into another, but in CSS you can co
 }
 ``` 
 
+*Support: IE10+*
+
 ***Linear Gradient***
 
 Perhaps the most common and useful type of gradient is the linear-gradient(). The gradients "axis" can go from left-to-right, top-to-bottom, or at any angle you chose. Not declaring an angle will assume top-to-bottom.
@@ -527,7 +529,28 @@ A radial gradient doesn't have to start at the default center either, you can sp
   
   - New: Verbose first param, like "circle closest-corner at top right"
   
-* It is recommended to used autoprefixers like [postcss](https://github.com/postcss/autoprefixer) to handle vendor prefixes to make it work across different browsers consistently. 
+* It is recommended to used autoprefixers like [postcss](https://github.com/postcss/autoprefixer) to handle vendor prefixes to make it work across different browsers consistently.
+ 
+***Repeating Gradients***
+ 
+The size of the gradient is determined by the final color stop. If that's at 20px, the size of the gradient (which then repeats) is a 20px by 20px square.
+ 
+```css
+.repeat {
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      yellow,
+      yellow 10px,
+      red 10px,
+      red 20px /* determines size */
+    );
+}
+``` 
+
+They can be used with both linear and radial varieties. 
+
+There is a trick, with non-repeating gradients, to create the gradient in such a way that if it was a little tiny rectangle, it would line up with other little tiny rectangle versions of itself to create a repeating pattern. So essentially create that gradient and set the background-size to make that little tiny rectangle. That made it easy to make stripes, which you could then rotate or whatever. 
  
 *More reading:*
  
