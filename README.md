@@ -337,6 +337,8 @@ Support: IE9+
 
 http://www.css3.info/preview/box-shadow/
 
+https://css-tricks.com/almanac/properties/b/box-shadow/
+
 ### Selector efficiency
 
 Below is the order of efficiency for selectors. IDs are the most efficient and pseudo classes and pseudo elements are the least efficient.
