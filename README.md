@@ -295,80 +295,6 @@ This is particularly useful when assigning border and padding/margin styles for 
 
 http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048
 
-## CSS3 Properties
-
-**border-radius**
-
-```css
--webkit-border-radius: 4px;
--moz-border-radius: 4px;
-border-radius: 4px;
-```
-
-Allows rounded corners in elements. Can also be used to create circles.
-
-*Support: IE9+*
-
-**box-shadow**
-
-```css
--webkit-box-shadow: 1px 1px 3px #292929;
--moz-box-shadow: 1px 1px 3px #292929;
-box-shadow: 1px 1px 3px #292929;
-```
-
-The box-shadow property allows us to easily implement multiple drop shadows (outer or inner) on box elements, specifying values for color, size, blur and offset.
-
-box-shadow accepts four parameters: x-offset, y-offset, blur, color of shadow.
-
-* The first value defines the horizontal offset of the shadow, with a positive value offseting the shadow to the right of the element, and a negative value to the left.
-* The second value defines the vertifical offset of the shadow, with a positive value offsetting the shadow from the bottom of the element, and a negative value from the top.
-* If supplied, an optional third value defines the blur distance of the shadow. Only positive values are allowed, and the larger the value, the more the shadow’s edge is blurred.
-* An optional fourth value can be supplied to define the spread distance of the shadow. A positive value will cause the shadow shape to expand in all directions, while a negative value will cause the shadow shape to contract.
-
-An optional ‘inset’ keyword can be supplied, preceding the length and color values. If present, this keyword causes the shadow to be drawn inside the element.
-
-```css
--webkit-box-shadow: 0 0 20px #333 inset;
--moz-box-shadow: 0 0 20px #333 inset;
-box-shadow: 0 0 20px #333 inset;
-```
-
-text-shadow has the same set of properties as well.
-
-It allows you to immediately apply depth to your elements. We can apply multiple shadows by using comma as a separator.
-
-*Support: IE9+*
-
-*More reading:*
-
-http://www.css3.info/preview/box-shadow/
-
-https://css-tricks.com/almanac/properties/b/box-shadow/
-
-**text-shadow**
-
-```css
-color: #fff /* text color to white */
-text-shadow: 0 0 50px #333;
-```
-
-Text shadows are like box shadows except that they are shadows for text rather than the whole element. Luckily, there is no vendor prefix necessary for text shadow.
-
-The options for text shadow are the same as for box-shadow except that there is *no inset* text shadow support. 
-
-As with box shadows, it is possible to have multiple text shadows just by separating them with commas. Here is an example that creates a flaming text effect.
-
-```css
-text-shadow: 0 0 4px #ccc, 
-             0 -5px 4px #ff3, 
-             2px -10px 6px #fd3, 
-             -2px -15px 11px #f80, 
-             2px -18px 18px #f20;
-```             
-
-*Support: IE10+*
-
 ### Selector efficiency
 
 Below is the order of efficiency for selectors. IDs are the most efficient and pseudo classes and pseudo elements are the least efficient.
@@ -442,6 +368,80 @@ http://csswizardry.com/2011/09/writing-efficient-css-selectors/
 http://stackoverflow.com/questions/5797014/why-do-browsers-match-css-selectors-from-right-to-left
 
 http://benfrain.com/css-performance-revisited-selectors-bloat-expensive-styles/
+
+## CSS3 Properties
+
+**border-radius**
+
+```css
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+```
+
+Allows rounded corners in elements. Can also be used to create circles.
+
+*Support: IE9+*
+
+**box-shadow**
+
+```css
+-webkit-box-shadow: 1px 1px 3px #292929;
+-moz-box-shadow: 1px 1px 3px #292929;
+box-shadow: 1px 1px 3px #292929;
+```
+
+The box-shadow property allows us to easily implement multiple drop shadows (outer or inner) on box elements, specifying values for color, size, blur and offset.
+
+box-shadow accepts four parameters: x-offset, y-offset, blur, color of shadow.
+
+* The first value defines the horizontal offset of the shadow, with a positive value offseting the shadow to the right of the element, and a negative value to the left.
+* The second value defines the vertifical offset of the shadow, with a positive value offsetting the shadow from the bottom of the element, and a negative value from the top.
+* If supplied, an optional third value defines the blur distance of the shadow. Only positive values are allowed, and the larger the value, the more the shadow’s edge is blurred.
+* An optional fourth value can be supplied to define the spread distance of the shadow. A positive value will cause the shadow shape to expand in all directions, while a negative value will cause the shadow shape to contract.
+
+An optional ‘inset’ keyword can be supplied, preceding the length and color values. If present, this keyword causes the shadow to be drawn inside the element.
+
+```css
+-webkit-box-shadow: 0 0 20px #333 inset;
+-moz-box-shadow: 0 0 20px #333 inset;
+box-shadow: 0 0 20px #333 inset;
+```
+
+text-shadow has the same set of properties as well.
+
+It allows you to immediately apply depth to your elements. We can apply multiple shadows by using comma as a separator.
+
+*Support: IE9+*
+
+*More reading:*
+
+http://www.css3.info/preview/box-shadow/
+
+https://css-tricks.com/almanac/properties/b/box-shadow/
+
+**text-shadow**
+
+```css
+color: #fff /* text color to white */
+text-shadow: 0 0 50px #333;
+```
+
+Text shadows are like box shadows except that they are shadows for text rather than the whole element. Luckily, there is no vendor prefix necessary for text shadow.
+
+The options for text shadow are the same as for box-shadow except that there is *no inset* text shadow support. 
+
+As with box shadows, it is possible to have multiple text shadows just by separating them with commas. Here is an example that creates a flaming text effect.
+
+```css
+text-shadow: 0 0 4px #ccc, 
+             0 -5px 4px #ff3, 
+             2px -10px 6px #fd3, 
+             -2px -15px 11px #f80, 
+             2px -18px 18px #f20;
+```             
+
+*Support: IE10+*
 
 ---
 
