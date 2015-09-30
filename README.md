@@ -449,6 +449,75 @@ Just as you can declare the background of an element to be a solid color in CSS,
 
 Gradients are typically one color that fades into another, but in CSS you can control every aspect of how that happens, from the direction to the colors (as many as you want) to where those color changes happen.
  
+```css
+.gradient {
+  /* can be treated like a fallback */
+  background-color: red;
+
+  /* will be "on top", if browser supports it */
+  background-image: linear-gradient(red, orange);
+
+  /* these will reset other properties, like background-position, but it does know what you mean */
+  background: red;
+  background: linear-gradient(red, orange);
+}
+``` 
+
+***Linear Gradient***
+
+Perhaps the most common and useful type of gradient is the linear-gradient(). The gradients "axis" can go from left-to-right, top-to-bottom, or at any angle you chose.
+
+Not declaring an angle will assume top-to-bottom
+
+To make it left-to-right, you pass an additional parameter at the beginning of the linear-gradient() function starting with the word "to", indicating the direction, like "to right". This "to" syntax works for corners as well.
+
+You aren't limited to just two colors either. In fact you can have as many comma-separated colors as you want.
+
+You can also declare where you want any particular color to "start". Those are called "color-stops". Say you wanted yellow to take up the majority of the space, but red only a little bit in the beginning, you could make the yellow color-stop pretty early:
+
+```css
+.gradient {
+  height: 100px;
+  background-image:
+    linear-gradient(
+      to right,
+      red,
+      yellow 10%
+    );
+}
+```
+
+****Gotchas****
+
+* We tend to think of gradients as fading colors, but if you have two color stops that are the same, you can make a solid color instantly change to another solid color. This can be useful for declaring a full-height background that simulates columns.
+
+http://codepen.io/chriscoyier/pen/csgoD
+
+* There are three different syntaxes that browsers have supported. This isn't what they are officially called, but you can think of it like:
+  
+  - Old: original WebKit-only way, with stuff like from() and color-stop()
+  
+  - Tweener: old angle system, e.g. "left"
+  
+  - New: new angle system, e.g. "to right"
+  
+The way degrees work in the OLD vs NEW syntax is a bit different. The OLD (and TWEENER - usually prefixed) way defines 0deg and left-to-right and proceeds counter-clockwise, while the NEW (usually unprefixed) way defines 0deg as bottom-to-top and proceeds clockwise.
+
+OLD (or TWEENER) = (450 - new) % 360
+
+or even simpler:
+
+NEW = 90 - OLD
+OLD = 90 - NEW
+
+like:
+
+OLD linear-gradient(135deg, red, blue)
+NEW linear-gradient(315deg, red, blue)
+
+
+
+ 
 *More reading:*
  
 https://css-tricks.com/css3-gradients/
