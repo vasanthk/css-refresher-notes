@@ -346,6 +346,29 @@ http://www.css3.info/preview/box-shadow/
 
 https://css-tricks.com/almanac/properties/b/box-shadow/
 
+**text-shadow**
+
+```css
+color: #fff /* text color to white */
+text-shadow: 0 0 50px #333;
+```
+
+Text shadows are like box shadows except that they are shadows for text rather than the whole element. Luckily, there is no vendor prefix necessary for text shadow.
+
+The options for text shadow are the same as for box-shadow except that there is *no inset* text shadow support. 
+
+As with box shadows, it is possible to have multiple text shadows just by separating them with commas. Here is an example that creates a flaming text effect.
+
+```css
+text-shadow: 0 0 4px #ccc, 
+             0 -5px 4px #ff3, 
+             2px -10px 6px #fd3, 
+             -2px -15px 11px #f80, 
+             2px -18px 18px #f20;
+```             
+
+*Support: IE10+*
+
 ### Selector efficiency
 
 Below is the order of efficiency for selectors. IDs are the most efficient and pseudo classes and pseudo elements are the least efficient.
@@ -425,3 +448,5 @@ http://benfrain.com/css-performance-revisited-selectors-bloat-expensive-styles/
 *Links*
 
 http://designshack.net/articles/css/5-steps-to-drastically-improve-your-css-knowledge-in-24-hours/
+
+http://code.tutsplus.com/series/css3-mastery--net-18126
