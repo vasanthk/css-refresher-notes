@@ -465,14 +465,9 @@ Gradients are typically one color that fades into another, but in CSS you can co
 
 ***Linear Gradient***
 
-Perhaps the most common and useful type of gradient is the linear-gradient(). The gradients "axis" can go from left-to-right, top-to-bottom, or at any angle you chose.
-
-Not declaring an angle will assume top-to-bottom
-
+Perhaps the most common and useful type of gradient is the linear-gradient(). The gradients "axis" can go from left-to-right, top-to-bottom, or at any angle you chose. Not declaring an angle will assume top-to-bottom.
 To make it left-to-right, you pass an additional parameter at the beginning of the linear-gradient() function starting with the word "to", indicating the direction, like "to right". This "to" syntax works for corners as well.
-
 You aren't limited to just two colors either. In fact you can have as many comma-separated colors as you want.
-
 You can also declare where you want any particular color to "start". Those are called "color-stops". Say you wanted yellow to take up the majority of the space, but red only a little bit in the beginning, you could make the yellow color-stop pretty early:
 
 ```css
@@ -487,7 +482,7 @@ You can also declare where you want any particular color to "start". Those are c
 }
 ```
 
-****Gotchas****
+***Gotchas***
 
 * We tend to think of gradients as fading colors, but if you have two color stops that are the same, you can make a solid color instantly change to another solid color. This can be useful for declaring a full-height background that simulates columns.
 
