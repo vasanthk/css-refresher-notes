@@ -488,7 +488,7 @@ You can also declare where you want any particular color to "start". Those are c
 
 http://codepen.io/chriscoyier/pen/csgoD
 
-* There are three different syntaxes that browsers have supported. This isn't what they are officially called, but you can think of it like:
+* There are three different syntaxes that browsers have supported:
   
   - Old: original WebKit-only way, with stuff like from() and color-stop()
   
@@ -510,8 +510,26 @@ like:
 OLD linear-gradient(135deg, red, blue)
 NEW linear-gradient(315deg, red, blue)
 
+***Radial Gradients***
 
+Radial gradient differ from linear in that they start at a single point and emanate outwards. Gradients are often used to simulate a lighting, which as we know isn't always straight, so they can be useful to make a gradient seem even more natural.
 
+The default is for the first color to start in the (center center) of the element and fade to the end color toward the edge of the element. The fade happens at an equal rate no matter which direction. The default gradient shape is an ellipse.
+
+The possible values for fade  are: closest-corner, closest-side, farthest-corner, farthest-side. You can think of it like: "I want this radial gradient to fade from the center point to the __________, and everywhere else fills in to accommodate that."
+A radial gradient doesn't have to start at the default center either, you can specify a certain point by using "at ______" as part of the first parameter.
+  
+***Gotchas***
+  
+* There are again three different syntaxes that browsers have supported:  
+  
+  - Old: Prefixed with -webkit-, stuff like from() and color-stop()
+  
+  - Tweener: First param was location of center. That will completely break now in browsers that support new syntax unprefixed, so make sure any tweener syntax is prefixed.
+  
+  - New: Verbose first param, like "circle closest-corner at top right"
+  
+* It is recommended to used autoprefixers like [postcss](https://github.com/postcss/autoprefixer) to handle vendor prefixes to make it work across different browsers consistently. 
  
 *More reading:*
  
