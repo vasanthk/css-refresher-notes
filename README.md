@@ -443,6 +443,16 @@ text-shadow: 0 0 4px #ccc,
 
 *Support: IE10+*
 
+**Gradients**
+
+Just as you can declare the background of an element to be a solid color in CSS, you can also declare that background to be a gradient. Using gradients declared in CSS, rather using an actual image file, is better for control and performance.
+
+Gradients are typically one color that fades into another, but in CSS you can control every aspect of how that happens, from the direction to the colors (as many as you want) to where those color changes happen.
+ 
+*More reading:*
+ 
+https://css-tricks.com/css3-gradients/
+
 ---
 
 *Links*
