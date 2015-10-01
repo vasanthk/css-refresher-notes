@@ -586,6 +586,8 @@ Or using @media rules:
 @media all and (color) { /* one or more rule sets... */ }
 ```
 
+There are currently 13 media features catered for in the specification: width, height, device-width, device-height, orientation, aspect-ratio,device-aspect-ratio, color, color-index, monochrome, resolution, scan, and grid. All but orientation, scan, and grid can accept min- and max- prefixes as well.
+
 ---
 
 *Links*
