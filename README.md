@@ -691,6 +691,10 @@ http://blog.froont.com/9-basic-principles-of-responsive-web-design/
 
 A CSS transition allows you to change the property of an element over a given duration that you set.
 
+* transition-property: The property to be transitioned (in this case, the background property)
+* transition-duration: How long the transition should last (0.3 seconds)
+* transition-timing-function: How fast the transition happens over time (ease)
+
 *More reading:*
 
 http://alistapart.com/article/understanding-css3-transitions
