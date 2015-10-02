@@ -687,6 +687,14 @@ http://www.w3schools.com/css/css_rwd_intro.asp
 
 http://blog.froont.com/9-basic-principles-of-responsive-web-design/
 
+## CSS3 Transitions
+
+A CSS transition allows you to change the property of an element over a given duration that you set.
+
+*More reading:*
+
+http://alistapart.com/article/understanding-css3-transitions
+
 ---
 
 *Links*
