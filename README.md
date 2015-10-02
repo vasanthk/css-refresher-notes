@@ -1,5 +1,7 @@
 # CSS Refresher Notes
 
+This is a quick refresher of CSS concepts compiled from various articles online. I have linked to most of the articles used. Sorry if I missed any and a huge thanks to the community.  
+
 ##Positioning
 
 CSS Position allows up to 5 different values. But essentially only 4 values are commonly used.
