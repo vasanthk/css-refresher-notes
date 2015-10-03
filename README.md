@@ -736,6 +736,28 @@ http://alistapart.com/article/understanding-css3-transitions
 
 http://code.tutsplus.com/tutorials/css-fundamentals-css3-transitions--pre-10922
 
+## CSS Animations
+
+While CSS transitions are all about altering element properties as they move from state to state, CSS animations are dependent on keyframes and animation properties.
+
+* keyframes: Used to define the styles an element will have at various times.
+* animation properties: Used to assign @keyframes to a specific element and determine how it is animated. 
+
+There are 8 animation properties
+
+* animation-delay – specifies a delay for the start of an animation.
+* animation-direction – specifies whether an animation should play in reverse direction or alternate cycles.
+* animation-duration – specifies how many seconds or milliseconds an animation takes to complete one cycle.
+* animation-fill-mode – specifies a style for the element when the animation is not playing. Such as when it is finished or when it has a delay.
+* animation-iteration-count – specifies the number of times an animation should be played.
+* animation-name – specifies the name of the @keyframes animation.
+* animation-play-state – specifies whether the animation is running or paused.
+* animation-timing-function – specifies the speed curve of the animation.
+
+*More reading:*
+
+https://www.elegantthemes.com/blog/tips-tricks/an-introduction-to-css-transitions-animations
+
 ---
 
 *Links*
