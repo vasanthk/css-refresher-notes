@@ -716,12 +716,25 @@ a.foo:focus {
   background: #690;
 }
 ```
-  
+
 Let’s say that along with the background color, we also want to change the link’s text color and transition that as well. We can do that by stringing multiple transitions together, separated by a comma. Each can have their varying duration and timing functions. An alternative to listing multiple properties is using the all value. This will transition all available properties.
+
+Another basic use of changing states is to change the background of an input box on focus.
+
+```css
+input.ourInputBox:focus{ 
+ -webkit-transition:background-color 0.5s linear; 
+ background:#CCC; 
+}
+```
+
+This time, we put the transition declaration into the hover state, so that we aren’t adding additional unnecessary classes to the CSS. We apply the transition once the input box acquires focus.
 
 *More reading:*
 
 http://alistapart.com/article/understanding-css3-transitions
+
+http://code.tutsplus.com/tutorials/css-fundamentals-css3-transitions--pre-10922
 
 ---
 
