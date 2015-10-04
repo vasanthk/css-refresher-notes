@@ -758,6 +758,12 @@ There are 8 animation properties
 
 https://www.elegantthemes.com/blog/tips-tricks/an-introduction-to-css-transitions-animations
 
+https://robots.thoughtbot.com/css-animation-for-beginners
+
+http://callmenick.com/post/simple-css3-transitions-transforms-animations-compilation  
+
+http://learn.shayhowe.com/advanced-html-css/performance-organization/
+
 ---
 
 *Links*
