@@ -743,6 +743,34 @@ While CSS transitions are all about altering element properties as they move fro
 * keyframes: Used to define the styles an element will have at various times.
 * animation properties: Used to assign @keyframes to a specific element and determine how it is animated. 
 
+***Keyframes***
+
+Keyframes are the foundation of CSS animations. They define what the animation looks like at each stage of the animation timeline. Each @keyframes is composed of:
+
+- Name of the animation: A name that describes the animation, for example, bounceIn.
+
+- Stages of the animation: Each stage of the animation is represented as a percentage. 0% represents the beginning state of the animation. 100% represents the ending state of the animation. Multiple intermediate states can be added in between.
+
+- CSS Properties: The CSS properties defined for each stage of the animation timeline.
+
+Let’s take a look at a simple @keyframes I’ve named “bounceIn”. This @keyframes has three stages. At the first stage (0%), the element is at opacity 0 and scaled down to 10 percent of its default size, using CSS transform scale. At the second stage (60%) the element fades in to full opacity and grows to 120 percent of its default size. At the final stage (100%), it scales down slightly and returns to its default size.
+
+```css
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+```
+
 There are 8 animation properties
 
 * animation-delay – specifies a delay for the start of an animation.
