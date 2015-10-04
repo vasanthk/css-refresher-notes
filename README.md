@@ -805,16 +805,14 @@ div {
 
 By adding both the @keyframes and the animation properties, we have a simple animation!
 
-There are 8 animation properties
+In addition to the required animation-name and animation-duration properties, you can further customize and create complex animations using the following properties:
 
-* animation-delay – specifies a delay for the start of an animation.
-* animation-direction – specifies whether an animation should play in reverse direction or alternate cycles.
-* animation-duration – specifies how many seconds or milliseconds an animation takes to complete one cycle.
-* animation-fill-mode – specifies a style for the element when the animation is not playing. Such as when it is finished or when it has a delay.
-* animation-iteration-count – specifies the number of times an animation should be played.
-* animation-name – specifies the name of the @keyframes animation.
-* animation-play-state – specifies whether the animation is running or paused.
 * animation-timing-function – specifies the speed curve of the animation.
+* animation-delay – specifies a delay for the start of an animation.
+* animation-iteration-count – specifies the number of times an animation should be played.
+* animation-direction – specifies whether an animation should play in reverse direction or alternate cycles.
+* animation-fill-mode – specifies a style for the element when the animation is not playing. Such as when it is finished or when it has a delay.
+* animation-play-state – specifies whether the animation is running or paused.
 
 Order used in shorthand syntax:
 
