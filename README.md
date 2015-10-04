@@ -755,6 +755,8 @@ Keyframes are the foundation of CSS animations. They define what the animation l
 
 Let’s take a look at a simple @keyframes I’ve named “bounceIn”. This @keyframes has three stages. At the first stage (0%), the element is at opacity 0 and scaled down to 10 percent of its default size, using CSS transform scale. At the second stage (60%) the element fades in to full opacity and grows to 120 percent of its default size. At the final stage (100%), it scales down slightly and returns to its default size.
 
+The @keyframes are added to your main CSS file.
+
 ```css
 @keyframes bounceIn {
   0% {
@@ -771,6 +773,38 @@ Let’s take a look at a simple @keyframes I’ve named “bounceIn”. This @ke
 }
 ```
 
+***Animation Properties***
+
+Once the @keyframes are defined, the animation properties must be added in order for your animation to function.
+
+Animation properties do two things:
+
+* They assign the @keyframes to the elements you want to animate.
+* They define how it is animated.
+
+The animation properties are added to the CSS selectors(or elements) that you want to animate, You must add the following two animation properties for the animation to take effect.
+
+* animation-name: The name of the animation defined in the @keyframes.
+* animation-duration: The duration of the animations, in seconds (eg. 5s) or milliseconds (eg. 200ms).
+
+Continuing with the above bounceIn example, we’ll add animation-name and animation-duration to the div that we want to animate.
+
+```css
+div {
+  animation-duration: 2s;
+  animation-name: bounceIn;
+}
+```
+
+Shorthand syntax:
+```css
+div {
+  animation: bounceIn 2s;
+}
+```
+
+By adding both the @keyframes and the animation properties, we have a simple animation!
+
 There are 8 animation properties
 
 * animation-delay – specifies a delay for the start of an animation.
@@ -781,6 +815,12 @@ There are 8 animation properties
 * animation-name – specifies the name of the @keyframes animation.
 * animation-play-state – specifies whether the animation is running or paused.
 * animation-timing-function – specifies the speed curve of the animation.
+
+Order used in shorthand syntax:
+
+animation: [animation-name] [animation-duration] [animation-timing-function]
+[animation-delay] [animation-iteration-count] [animation-direction]
+[animation-fill-mode] [animation-play-state];
 
 *More reading:*
 
