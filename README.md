@@ -820,6 +820,14 @@ animation: [animation-name] [animation-duration] [animation-timing-function]
 [animation-delay] [animation-iteration-count] [animation-direction]
 [animation-fill-mode] [animation-play-state];
 
+To add multiple animations to a selector, you simply separate the values with a comma. Here’s an example:
+
+```css
+.div {
+  animation: slideIn 2s, rotate 1.75s;
+}
+```
+
 *More reading:*
 
 https://www.elegantthemes.com/blog/tips-tricks/an-introduction-to-css-transitions-animations
