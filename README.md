@@ -18,6 +18,7 @@ I have linked to most of the articles used, sorry if I missed any. Huge thanks t
 - [CSS3 Transitions](#css3-transitions)
 - [CSS Animations](#css-animations)
 - [Scalable Vector Graphics (SVG)](#scalable-vector-graphics-svg)
+- [Vertical Alignment](#vertical-alignment)
 
 ## Positioning
 
@@ -924,6 +925,170 @@ http://www.creativebloq.com/web-design/icon-fonts-vs-svg-101413211
 [Building Better Interfaces With SVG - Sara Soueidan](https://www.youtube.com/watch?v=lMFfTRiipOQ)
 
 [SVG Lessons I Learned The Hard Way - Sara Soueidan](https://www.youtube.com/watch?v=NkLDuPf5P0A)
+
+## Vertical Alignment
+
+Vertical alignment is one of the main reasons some people think CSS is confusing. You wonder, I guess, why is it so *hard* to align content vertically with CSS? Why don't they create a property that does it automatically? _Why does `vertical-align` not work form me?!_
+
+About the `vertical-align` question: this property is only for aligning inline or table-cell elements, hope it ends your doubt about it.
+
+And about being hard, well, turns out it is not that hard, but there are some questions you have to do to yourself when wanting do align something vertically:
+
+* Is it a inline or block-level element?
+* If it's a text, is it single or multi-line?
+* Do you always know the height of the content?
+* Can you use CSS3?
+
+**The line-height method:**
+
+This method can be used when you're vertically aligning a single-line text, single-line inline-level element or a image.
+
+Let's say you have the following HTML:
+
+```html
+  <div class="parent">
+    <span class="child">Hello!</span>
+  </div>
+```
+
+You'll then align the `.child` content with:
+
+```css
+  .parent {
+    height: 150px;
+  }
+
+  .child {
+    line-height: 150px;
+  }
+```
+
+But if the content of `.child` is directly inside `.parent` like this:
+
+```html
+  <div class="parent">
+    Hello!
+  </div>
+```
+
+You then can put the `line-height` property on it:
+
+```css
+  .parent {
+    height: 150px;
+    line-height: 150px;
+  }
+```
+
+If, instead of a `<span>` you have a `<img>`:
+
+```html
+  <div class="parent">
+    <img src="image.jpg" class="child-image"/>
+  </div>
+```
+
+You got to change to:
+
+```css
+  .parent {
+    height: 150px;
+    line-height: 150px;
+  }
+
+  .child-image {
+    vertical-align: middle; /* Aha! Here it does work :) */
+  }
+```
+
+**The CSS table method:**
+
+This method consists in simulating a table with CSS. Let's say you have the given HTML:
+
+```html
+  <div class="parent">
+    <div class="child">
+      Hello, CSS table method!
+    </div>
+  </div>
+```
+
+You'll align `.child` with:
+
+```css
+  .parent {
+    display: table;
+  }
+
+  .child {
+    display: table-cell;
+    vertical-align: middle; /* Yep, it works here too! */
+  }
+```
+
+This way, it doesn't matter what's the height of `.parent`, `.child` will always be vertically aligned.
+
+Sadly this method does not work with older versions of Internet Explorer.
+
+**The absolute position method:**
+
+This method has two ways to be implemented:
+
+1 - If you know the height of the element you want to align
+2 - If you don't know this height (only works if you can use CSS3)
+
+Let's say you have the following HTML:
+
+```html
+  <div class="parent">
+    <div class="child">
+      Hello, absolute position method!
+    </div>
+  </div>
+```
+
+With the _first_ way, you can align `.child`with:
+
+```css
+  .parent {
+    position: relative;
+    height: 300px; /* It is important that parent have a height different from `auto` */
+  }
+
+  .child {
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    margin-top: -25px;
+  }
+```
+
+And with the _second_ way, you should do this:
+
+```css
+  .parent {
+    position: relative;
+    height: 300px; /* It is important that parent have a height different from `auto` */
+  }
+
+  .child {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+```
+
+There are the main ways to do it, but you can still vertically align using flexbox, padding, stretching, etc.
+
+*More reading:*
+
+https://css-tricks.com/centering-css-complete-guide/
+
+http://vanseodesign.com/css/vertical-centering/
+
+http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+
+http://howtocenterincss.com/
 
 ---
 
