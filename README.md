@@ -140,7 +140,7 @@ div {
 
 **Flexbox:**
 * Aims at providing a more efficient way to lay out, align and distribute space among items in a container, even when their size is unknown and/or dynamic (thus the word 'flex')
-* The main idea behind the flex layout is to give the container the ability to alter its items' width/height (and order) to best fill the available space (mostly to accomodate to all kind of display devices and screen sizes).
+* The main idea behind the flex layout is to give the container the ability to alter its items' width/height (and order) to best fill the available space (mostly to accommodate to all kind of display devices and screen sizes).
 * A flex container expands items to fill available free space, or shrinks them to prevent overflow.
 * Most importantly, the flexbox layout is direction-agnostic as opposed to the regular layouts (block which is vertically-based and inline which is horizontally-based).
 * Flexbox layout is most appropriate to the components of an application, and small-scale layouts, while the Grid layout is intended for larger scale layouts.
@@ -168,7 +168,7 @@ such as the paragraph in the example above. Most of the time, this gives the des
 * Collapsing is when a parent element that contains any number of floated elements doesn’t expand to completely surround those elements in the way it would if the elements were not floated.
 * There is a method that allows a parent element to clear itself of any floated elements inside it. It uses a CSS property called overflow with a value of hidden. 
 Note that the overflow property was not intended for this type of use, and could cause some issues such as hiding content or causing unwanted scrollbars to appear.
-* Trick: For clearning floats adding a ‘overflow:auto’ to the parent element also does the trick. 
+* Trick: For clearing floats adding a ‘overflow:auto’ to the parent element also does the trick. 
 * Note that overflow: auto doesn't clear floats — it causes the element to contain its floats by way of establishing a new block formatting context for them so that they don't intrude to other elements in the parent context.
 That is what forces the parent to stretch to contain them. You can only clear a float if you add a clearing element after the float. A parent element cannot clear its floating children.
 
@@ -262,7 +262,7 @@ a[data-info~="image"] {
 }
 ```
 
-The tilda (~) symbol allows us to target an attribute which has a spaced-separated list of values.
+The tilde (~) symbol allows us to target an attribute which has a spaced-separated list of values.
 
 ```css
 div:not(#container) {
@@ -323,7 +323,7 @@ Below is the order of efficiency for selectors. IDs are the most efficient and p
 * tag (div, h1, p)
 * adjacent sibling (h1 + p)
 * child (ul > li)
-* descendent (li a)
+* descendant (li a)
 * universal (*)
 * attribute (a[rel=”external”])
 * pseudo-class and pseudo element (a:hover, li:first)
@@ -414,8 +414,8 @@ The box-shadow property allows us to easily implement multiple drop shadows (out
 
 box-shadow accepts four parameters: x-offset, y-offset, blur, color of shadow.
 
-* The first value defines the horizontal offset of the shadow, with a positive value offseting the shadow to the right of the element, and a negative value to the left.
-* The second value defines the vertifical offset of the shadow, with a positive value offsetting the shadow from the bottom of the element, and a negative value from the top.
+* The first value defines the horizontal offset of the shadow, with a positive value offsetting the shadow to the right of the element, and a negative value to the left.
+* The second value defines the vertical offset of the shadow, with a positive value offsetting the shadow from the bottom of the element, and a negative value from the top.
 * If supplied, an optional third value defines the blur distance of the shadow. Only positive values are allowed, and the larger the value, the more the shadow’s edge is blurred.
 * An optional fourth value can be supplied to define the spread distance of the shadow. A positive value will cause the shadow shape to expand in all directions, while a negative value will cause the shadow shape to contract.
 
@@ -863,7 +863,7 @@ In other words, SVG is a technology that allows us to create graphics by writing
 We can use ".svg" file in our code by setting it as an image source just like any other image "< img src='say_hello.svg'>". But it's not so interesting.
 One of the greatest things about SVG is that it is actually text file in XML format. So we can open it, read it and interact with it. We can take our SVG code, put in DOM and play with it - change elements parameters like position, background color or font family using JavaScript and CSS. Moreover, each element of SVG can be animated. And it's really awesome.
 
-So, basicaly, we should always use SVG graphics instead of PNG or JPEG, when we are talking about basic shapes, logos and vector graphic.
+So, basically, we should always use SVG graphics instead of PNG or JPEG, when we are talking about basic shapes, logos and vector graphic.
 
 Here's a simple red circle SVG
 ```css
