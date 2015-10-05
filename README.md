@@ -312,7 +312,7 @@ This is particularly useful when assigning border and padding/margin styles for 
 
 http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048
 
-### Selector efficiency
+## Selector efficiency
 
 Below is the order of efficiency for selectors. IDs are the most efficient and pseudo classes and pseudo elements are the least efficient.
 
@@ -330,7 +330,7 @@ Below is the order of efficiency for selectors. IDs are the most efficient and p
 
 http://vanseodesign.com/css/css-selector-performance/
 
-### Repaints and Reflows
+## Repaints and Reflows
 
 **Repaint** 
 
