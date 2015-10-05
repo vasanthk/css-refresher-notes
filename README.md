@@ -867,18 +867,18 @@ Each SVG shape (element) has some basic parameters:
 * Stroke - element border color.
 * Stroke-width - element border size.
 
-* Pros:
-- Resolution independent: Scalability without changing the image quality. It is widely used for devices with screens Retina and those close to them.
-- Small size. SVG image elements take up much less space than their twins created in raster format.
-- Flexibility. With CSS, you can quickly change the graphics settings on the site, such as background color or the position of the logo on the page. To do this, you can edit the file in any text editor.
-- It’s possible to view the contents of the SVG file in any browser (IE, Chrome, Opera, FireFox, Safari, etc.).
-- No unnecessary HTTP requests, unlike using an <img> tag
-- SEO friendly: text labels, descriptions can be searched by search engines.
-- We have scripting control for custom interactive events and animation.
+***Pros:***
+  - Resolution independent: Scalability without changing the image quality. It is widely used for devices with screens Retina and those close to them.
+  - Small size. SVG image elements take up much less space than their twins created in raster format.
+  - Flexibility. With CSS, you can quickly change the graphics settings on the site, such as background color or the position of the logo on the page. To do this, you can edit the file in any text editor.
+  - It’s possible to view the contents of the SVG file in any browser (IE, Chrome, Opera, FireFox, Safari, etc.).
+  - No unnecessary HTTP requests, unlike using an <img> tag
+  - SEO friendly: text labels, descriptions can be searched by search engines.
+  - We have scripting control for custom interactive events and animation.
 
-* Cons:
-- The file size is growing very fast, if the object consists of a large number of small elements.
-- It’s impossible to read a part of the graphic object, only the entire object and it slows you down.
+***Cons:***
+  - The file size is growing very fast, if the object consists of a large number of small elements.
+  - It’s impossible to read a part of the graphic object, only the entire object and it slows you down.
 
 *Support: IE9+*
 
