@@ -2,6 +2,21 @@
 
 This is a quick refresher of CSS concepts compiled from various articles online. I have linked to most of the articles used. Sorry if I missed any and a huge thanks to the community.  
 
+**Table of Contents**
+
+- [Positioning](#positioning)
+- [Display](#display)
+- [Floats](#floats)
+- [CSS Selectors](#css-selectors)
+  - [Selector efficiency](#selector-efficiency)
+  - [Repaints and Reflows](#repaints-and-reflows)
+- [CSS3 Properties](#css3-properties)
+- [CSS3 Media queries](#css3-media-queries)
+- [Responsive Web Design](#responsive-web-design)
+- [CSS3 Transitions](#css3-transitions)
+- [CSS Animations](#css-animations)
+- [SVG](#svg)
+
 ##Positioning
 
 CSS Position allows up to 5 different values. But essentially only 4 values are commonly used.
