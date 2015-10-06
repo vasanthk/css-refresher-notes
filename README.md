@@ -68,11 +68,11 @@ div {
 
 *More reading:*
 
-https://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/
+[Absolute, Relative, Fixed Positioning: How Do They Differ?](https://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/)
 
-http://alistapart.com/article/css-positioning-101
+[CSS Positioning 101](http://alistapart.com/article/css-positioning-101)
 
-http://www.barelyfitz.com/screencast/html-training/css/positioning/
+[Learn CSS Positioning in Ten Steps](http://www.barelyfitz.com/screencast/html-training/css/positioning/)
 
 ##Display
 Every element on a web page is a rectangular box. The display property in CSS determines just how that rectangular box behaves.
@@ -154,9 +154,9 @@ div {
 
 *More reading:*
 
-https://css-tricks.com/almanac/properties/d/display/
+[CSS Almanac: Display](https://css-tricks.com/almanac/properties/d/display/)
 
-http://learnlayout.com/display.html
+[Learn CSS Layout: The "display" property](http://learnlayout.com/display.html)
 
 ## Floats
 * Floated elements are first laid out according to the normal flow, then taken out of the normal flow and sent as far to the right or left (depending on which value is applied) of the parent element. 
@@ -209,9 +209,9 @@ Any margin that we add to the paragraph is being applied way off to the right of
 
 *More reading:*
 
-http://designshack.net/articles/css/everything-you-never-knew-about-css-floats/
+[Everything You Never Knew About CSS Floats](http://designshack.net/articles/css/everything-you-never-knew-about-css-floats/)
 
-http://alistapart.com/article/css-floats-101
+[CSS Floats 101](http://alistapart.com/article/css-floats-101)
 
 ## CSS Selectors
 
@@ -313,7 +313,7 @@ This is particularly useful when assigning border and padding/margin styles for 
 
 *More reading:*
 
-http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048
+[The 30 CSS Selectors you Must Memorize](http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048)
 
 ## Selector efficiency
 
@@ -331,7 +331,7 @@ Below is the order of efficiency for selectors. IDs are the most efficient and p
 
 *More Reading*
 
-http://vanseodesign.com/css/css-selector-performance/
+[CSS Selectors: Should You Optimize Them To Perform Better?](http://vanseodesign.com/css/css-selector-performance/)
 
 ## Repaints and Reflows
 
@@ -381,13 +381,13 @@ For a comprehensive list of what forces reflows - check Paul Irish's gist [here]
 
 *More Reading*
 
-http://www.stubbornella.org/content/2009/03/27/reflows-repaints-css-performance-making-your-javascript-slow/
+[Reflows & Repaints: CSS performance making your JavaScript slow?](http://www.stubbornella.org/content/2009/03/27/reflows-repaints-css-performance-making-your-javascript-slow/)
 
-http://csswizardry.com/2011/09/writing-efficient-css-selectors/
+[Writing efficient CSS selectors](http://csswizardry.com/2011/09/writing-efficient-css-selectors/)
 
-http://stackoverflow.com/questions/5797014/why-do-browsers-match-css-selectors-from-right-to-left
+[Why do browsers match CSS selectors from right to left?](http://stackoverflow.com/questions/5797014/why-do-browsers-match-css-selectors-from-right-to-left)
 
-http://benfrain.com/css-performance-revisited-selectors-bloat-expensive-styles/
+[CSS performance revisited: selectors, bloat and expensive styles](http://benfrain.com/css-performance-revisited-selectors-bloat-expensive-styles/)
 
 ## CSS3 Properties
 
@@ -436,9 +436,9 @@ It allows you to immediately apply depth to your elements. We can apply multiple
 
 *More reading:*
 
-http://www.css3.info/preview/box-shadow/
+[Box-shadow, one of CSS3’s best new features](http://www.css3.info/preview/box-shadow/)
 
-https://css-tricks.com/almanac/properties/b/box-shadow/
+[CSS Almanac: box-shadow](https://css-tricks.com/almanac/properties/b/box-shadow/)
 
 **text-shadow**
 
@@ -574,7 +574,7 @@ There is a trick, with non-repeating gradients, to create the gradient in such a
  
 *More reading:*
  
-https://css-tricks.com/css3-gradients/
+[CSS Gradients](https://css-tricks.com/css3-gradients/)
 
 ## CSS3 Media queries
 
@@ -701,9 +701,9 @@ The srcset attribute is required, and defines the source of the image. The media
 
 *More reading:*
  
-http://www.w3schools.com/css/css_rwd_intro.asp
+[w3schools - Responsive Web Design](http://www.w3schools.com/css/css_rwd_intro.asp)
 
-http://blog.froont.com/9-basic-principles-of-responsive-web-design/
+[9 basic principles of responsive web design](http://blog.froont.com/9-basic-principles-of-responsive-web-design/)
 
 ## CSS3 Transitions
 
@@ -750,9 +750,9 @@ This time, we put the transition declaration into the hover state, so that we ar
 
 *More reading:*
 
-http://alistapart.com/article/understanding-css3-transitions
+[Understanding CSS3 Transitions](http://alistapart.com/article/understanding-css3-transitions)
 
-http://code.tutsplus.com/tutorials/css-fundamentals-css3-transitions--pre-10922
+[CSS Fundamentals: CSS3 Transitions](http://code.tutsplus.com/tutorials/css-fundamentals-css3-transitions--pre-10922)
 
 ## CSS Animations
 
@@ -848,13 +848,13 @@ To add multiple animations to a selector, you simply separate the values with a 
 
 *More reading:*
 
-https://www.elegantthemes.com/blog/tips-tricks/an-introduction-to-css-transitions-animations
+[An Introduction to CSS Transitions & Animations](https://www.elegantthemes.com/blog/tips-tricks/an-introduction-to-css-transitions-animations)
 
-https://robots.thoughtbot.com/css-animation-for-beginners
+[CSS Animation for Beginners](https://robots.thoughtbot.com/css-animation-for-beginners)
 
-http://callmenick.com/post/simple-css3-transitions-transforms-animations-compilation  
+[Simple CSS3 Transitions, Transforms, & Animations Compilation](http://callmenick.com/post/simple-css3-transitions-transforms-animations-compilation)  
 
-http://learn.shayhowe.com/advanced-html-css/performance-organization/
+[Learn to Code Advanced HTML & CSS](http://learn.shayhowe.com/advanced-html-css/performance-organization/)
 
 ## Scalable Vector Graphics (SVG)
 
@@ -902,13 +902,13 @@ Each SVG shape (element) has some basic parameters:
 
 *More reading:*
 
-http://tonyfreed.com/blog/introduction-to-svg
+[Introduction to SVG](http://tonyfreed.com/blog/introduction-to-svg)
 
-http://engageinteractive.co.uk/blog/an-introduction-to-svg
+[An introduction to SVG](http://engageinteractive.co.uk/blog/an-introduction-to-svg)
 
-http://davidwalsh.name/svg-animation
+[The Simple Intro to SVG Animation](http://davidwalsh.name/svg-animation)
 
-http://www.creativebloq.com/web-design/icon-fonts-vs-svg-101413211
+[Icon fonts vs SVG - which is the best option?](http://www.creativebloq.com/web-design/icon-fonts-vs-svg-101413211)
 
 *Videos:*
 
@@ -1082,20 +1082,20 @@ There are the main ways to do it, but you can still vertically align using flexb
 
 *More reading:*
 
-https://css-tricks.com/centering-css-complete-guide/
+[Centering in CSS: A Complete Guide](https://css-tricks.com/centering-css-complete-guide/)
 
-http://vanseodesign.com/css/vertical-centering/
+[6 Methods For Vertical Centering With CSS](http://vanseodesign.com/css/vertical-centering/)
 
-http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+[Vertical align anything with just 3 lines of CSS](http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/)
 
-http://howtocenterincss.com/
+[How to center in CSS](http://howtocenterincss.com/)
 
 ---
 
 *CSS Links*
 
-http://designshack.net/articles/css/5-steps-to-drastically-improve-your-css-knowledge-in-24-hours/
+[5 Steps to Drastically Improve Your CSS Knowledge in 24 Hours](http://designshack.net/articles/css/5-steps-to-drastically-improve-your-css-knowledge-in-24-hours/)
 
-http://code.tutsplus.com/series/css3-mastery--net-18126
+[CSS3 Mastery](http://code.tutsplus.com/series/css3-mastery--net-18126)
 
-http://code.tutsplus.com/tutorials/getting-to-work-with-css3-power-tools--net-13894
+[Getting to Work with CSS3 Power Tools](http://code.tutsplus.com/tutorials/getting-to-work-with-css3-power-tools--net-13894)
