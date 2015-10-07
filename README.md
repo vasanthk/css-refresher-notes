@@ -18,6 +18,7 @@ I have linked to most of the articles used, sorry if I missed any. Huge thanks t
 - [CSS3 Transitions](#css3-transitions)
 - [CSS Animations](#css-animations)
 - [Scalable Vector Graphics (SVG)](#scalable-vector-graphics-svg)
+- [CSS Sprites](#css-sprites)
 - [Vertical Alignment](#vertical-alignment)
 
 ## Positioning
@@ -925,6 +926,52 @@ Each SVG shape (element) has some basic parameters:
 [Building Better Interfaces With SVG - Sara Soueidan](https://www.youtube.com/watch?v=lMFfTRiipOQ)
 
 [SVG Lessons I Learned The Hard Way - Sara Soueidan](https://www.youtube.com/watch?v=NkLDuPf5P0A)
+
+## CSS Sprites
+
+​A CSS sprite is a performance optimization technique that combines multiple images into a single image called a sprite sheet or tile set. Sprites reduce network congestion by reducing the number of downloads needed to render a web page.
+
+While combining several images into one with sprites, all images are loaded with a single HTTP request. Browsers limit the number of concurrent requests a site can make and HTTP requests require a bit of handshaking. Thus, sprites are important for the same reasons that minifying and concatinating CSS and JavaScript are important.
+
+**Using Sprites in CSS**
+
+You set the same background-image on several CSS classes and set the background position and dimensions of the individual classes to display a single portion of the sprite.
+
+```css
+.flags-canada, .flags-mexico, .flags-usa {
+  background-image: url('../images/flags.png');
+  background-repeat: no-repeat;
+}
+
+.flags-canada {
+  height: 128px;
+  background-position: -5px -5px;
+}
+
+.flags-usa {
+  height: 135px;
+  background-position: -5px -143px;
+}
+
+.flags-mexico {
+  height: 147px;
+  background-position: -5px -288px;
+}
+```
+**Benefits**
+
+​CSS sprites reduce overall page load time while giving enterprises more control over the performance of their website.
+
+* Users experience faster page load times since images appear as soon as the sprite sheet is downloaded.
+* Enterprises see greater throughput and lower resource usage as fewer HTTP requests are made, reducing the amount of network congestion.
+
+*More reading:*
+
+[CSS Sprites: What They Are, Why They’re Cool, and How To Use Them](https://css-tricks.com/css-sprites/)
+
+[What are CSS Sprites](https://www.maxcdn.com/one/visual-glossary/css-sprites/)
+
+[w3schools - Image Sprites](http://www.w3schools.com/css/css_image_sprites.asp)
 
 ## Vertical Alignment
 
