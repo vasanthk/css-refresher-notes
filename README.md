@@ -92,8 +92,10 @@ div {
 
 **Inline:**
 * Default value for elements. Think of elements like span, b or em
-* Accepts padding and margin, but the element still sits inline. It will only push the elements horizontally away, not vertically.
-* Inline element does not accept height and width and will be ignored.
+* Will ignore top and bottom margin/padding settings, but will apply left and right margin/padding. Only moves horizontally, not vertically.
+* Is subject vertical-align property.
+* Will ignore the width and height properties.
+* If floated left or right, will automatically become a block-level element, subject to all block characteristics.
 
 **Inline Block:**
 * Very similar to inline in that it will set inline with the natural flow of text.
@@ -101,7 +103,10 @@ div {
 
 **Block:**
 * A number of elements are set to block by the browser US stylesheet. They are usually container elements such as div, section and ul. Also text 'blocks' like p and h1.
-* Block level elements do not sit inline, but break past them. By default (without setting a width) they take up as much horizontal space as they can.
+* Block level elements do not sit inline, but break past them. If no width is set, will expand naturally to fill its parent container.
+* Can have margins and/or padding.
+* If no height is set, will expand naturally to fit its child elements (assuming they are not floated or positioned). So, for a block element, it’s not necessary to give it a set width or to give it a width of 100%.
+* Ignores the vertical-align property 
 
 **Run-in:**
 * Not supported in Firefox + spec not well defined yet.
@@ -156,6 +161,8 @@ div {
 *More reading:*
 
 [CSS Almanac: Display](https://css-tricks.com/almanac/properties/d/display/)
+
+[The Difference Between “Block” and “Inline”](http://www.impressivewebs.com/difference-block-inline-css/)
 
 [Learn CSS Layout: The "display" property](http://learnlayout.com/display.html)
 
