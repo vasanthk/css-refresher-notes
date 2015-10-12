@@ -102,7 +102,7 @@ div {
 * Very similar to inline in that it will set inline with the natural flow of text.
 * Margin and paddings work properly.
 * Width and height will be respected.
-* There is a "bug" wich causes extra margin in inline block elements. See on [Known Issues](#extra-margin-on-inline-block-elements)
+* There is a "bug" which causes extra margin in inline block elements. See on [Known Issues](#extra-margin-on-inline-block-elements)
 
 **Block:**
 * A number of elements are set to block by the browser US stylesheet. They are usually container elements such as div, section and ul. Also text 'blocks' like p and h1.
