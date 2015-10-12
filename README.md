@@ -2,7 +2,7 @@
 
 This is a quick refresher of CSS concepts compiled from various articles online. Contributions are always welcome :)
 
-I have linked to most of the articles used, sorry if I missed any. Huge thanks to the community!  
+I have linked to most of the articles used, sorry if I missed any. Huge thanks to the community!
 
 **Table of Contents**
 
@@ -20,6 +20,7 @@ I have linked to most of the articles used, sorry if I missed any. Huge thanks t
 - [Scalable Vector Graphics (SVG)](#scalable-vector-graphics-svg)
 - [CSS Sprites](#css-sprites)
 - [Vertical Alignment](#vertical-alignment)
+- [Known Issues](#known-issues)
 
 ## Positioning
 
@@ -31,7 +32,7 @@ div {
   position: relative;
   position: absolute;
   position: fixed;
-  position: inherit; /* Not very common */ 
+  position: inherit; /* Not very common */
 }
 ```
 
@@ -39,15 +40,15 @@ div {
 * The only reason you would ever set an element to position: static is to forcefully-remove some positioning that got applied to an element outside of your control. This is fairly rare, as positioning doesn't cascade.
 
 **Relative:**
-* Allows nudging elements in different directions with top, right, bottom and left values. Its starting point is where it normally lies in the flow of the document, not the top left of the page. 
+* Allows nudging elements in different directions with top, right, bottom and left values. Its starting point is where it normally lies in the flow of the document, not the top left of the page.
 * When set to position relative, elements take up the same amount of space at the same exact position it was supposed to take as if its position was static.
-* It introduces the ability to use z-index on that element, which doesn't really work with statically positioned elements. Even if you don't set a z-index value, this element will now appear on top of any other statically positioned element. 
-* It limits the scope of absolutely positioned child elements. Any element that is a child of the relatively positioned element can be absolutely positioned within that block. 
+* It introduces the ability to use z-index on that element, which doesn't really work with statically positioned elements. Even if you don't set a z-index value, this element will now appear on top of any other statically positioned element.
+* It limits the scope of absolutely positioned child elements. Any element that is a child of the relatively positioned element can be absolutely positioned within that block.
 
 **Absolute:**
-* Position absolute takes the element out of the document flow. This means that it no longer takes up any space like what static and relative does. Think of it as an element with a giant strip of velcro on its back. Just tell it where to stick and it sticks. 
+* Position absolute takes the element out of the document flow. This means that it no longer takes up any space like what static and relative does. Think of it as an element with a giant strip of velcro on its back. Just tell it where to stick and it sticks.
 * You use the positioning attributes top, left, bottom and right to set the location. Remember that these values will be relative to the next parent element with relative (or absolute) positioning. If there is no such parent, it will default all the way back up to the <html> element itself meaning it will be placed relatively to the page itself.
-* The trade-off, and most important thing to remember, about absolute positioning is that these elements are removed from the flow of elements on the page. An element with this type of positioning is not affected by other elements and it doesn't affect other elements. 
+* The trade-off, and most important thing to remember, about absolute positioning is that these elements are removed from the flow of elements on the page. An element with this type of positioning is not affected by other elements and it doesn't affect other elements.
 
 **Fixed:**
 * Similar to position absolute, an element that has fixed position is taken out of the document flow.
@@ -59,8 +60,8 @@ div {
 * It works as the name implies: The element inherits the value of its parent element. Typically, position property elements do not naturally inherit their parent’s values—the static value is assigned if no position value is given. Ultimately, you can type inherit or the parent element’s value and get the same result.
 
 **Summary**
-* Relative positioning will allow you to tweak an element’s position relative to its normal starting point. 
-* Absolute positioning will allow you to tweak an element’s position relative to its first non-statically-positioned ancestor (defaults to page bounds if none is found). 
+* Relative positioning will allow you to tweak an element’s position relative to its normal starting point.
+* Absolute positioning will allow you to tweak an element’s position relative to its first non-statically-positioned ancestor (defaults to page bounds if none is found).
 * Both relatively and absolutely positioned items won’t affect the static and fixed items around them (absolutely positioned items are removed from the flow, relatively positioned items occupy their original position).
 
 **Gotchas:**
@@ -99,14 +100,16 @@ div {
 
 **Inline Block:**
 * Very similar to inline in that it will set inline with the natural flow of text.
-* Difference is that you will be able to set width and height, which will be respected.
+* Margin and paddings work properly.
+* Width and height will be respected.
+* There is a "bug" wich causes extra margin in inline block elements. See on [Known Issues](#extra-margin-on-inline-block-elements)
 
 **Block:**
 * A number of elements are set to block by the browser US stylesheet. They are usually container elements such as div, section and ul. Also text 'blocks' like p and h1.
 * Block level elements do not sit inline, but break past them. If no width is set, will expand naturally to fill its parent container.
 * Can have margins and/or padding.
 * If no height is set, will expand naturally to fit its child elements (assuming they are not floated or positioned). So, for a block element, it’s not necessary to give it a set width or to give it a width of 100%.
-* Ignores the vertical-align property. 
+* Ignores the vertical-align property.
 
 **Run-in:**
 * Not supported in Firefox + spec not well defined yet.
@@ -167,17 +170,17 @@ div {
 [Learn CSS Layout: The "display" property](http://learnlayout.com/display.html)
 
 ## Floats
-* Floated elements are first laid out according to the normal flow, then taken out of the normal flow and sent as far to the right or left (depending on which value is applied) of the parent element. 
+* Floated elements are first laid out according to the normal flow, then taken out of the normal flow and sent as far to the right or left (depending on which value is applied) of the parent element.
 In other words, they go from stacking on top of each other to sitting next to each other, given that there is enough room in the parent element for each floated element to sit.
 * Generally, a floated element should have an explicitly set width (unless it is a replaced element, like an image). This ensures that the float behaves as expected and helps to avoid issues in certain browsers.
-* Non-positioned, non-floated, block-level elements act as if the floated element is not there, since the floated element is out of flow in relation to other block elements. When we use a floated image in a paragraph - the text in the paragraph is inline, so it flows around the floated element. 
+* Non-positioned, non-floated, block-level elements act as if the floated element is not there, since the floated element is out of flow in relation to other block elements. When we use a floated image in a paragraph - the text in the paragraph is inline, so it flows around the floated element.
 * The clear property has five values available: left, right, both, inherit, and none. Assigning a value of left says the top edge of this element must sit below any element that has the float: left property applied to it.
-* A rule that I have found that works nicely for my layouts is float first. That is, in my HTML, I almost always place my floated elements first in the markup, and before any non-floated elements that my float will interact with, 
+* A rule that I have found that works nicely for my layouts is float first. That is, in my HTML, I almost always place my floated elements first in the markup, and before any non-floated elements that my float will interact with,
 such as the paragraph in the example above. Most of the time, this gives the desired result.
 * Collapsing is when a parent element that contains any number of floated elements doesn’t expand to completely surround those elements in the way it would if the elements were not floated.
-* There is a method that allows a parent element to clear itself of any floated elements inside it. It uses a CSS property called overflow with a value of hidden. 
+* There is a method that allows a parent element to clear itself of any floated elements inside it. It uses a CSS property called overflow with a value of hidden.
 Note that the overflow property was not intended for this type of use, and could cause some issues such as hiding content or causing unwanted scrollbars to appear.
-* Trick: For clearing floats adding a ‘overflow:auto’ to the parent element also does the trick. 
+* Trick: For clearing floats adding a ‘overflow:auto’ to the parent element also does the trick.
 * Note that overflow: auto doesn't clear floats — it causes the element to contain its floats by way of establishing a new block formatting context for them so that they don't intrude to other elements in the parent context.
 That is what forces the parent to stretch to contain them. You can only clear a float if you add a clearing element after the float. A parent element cannot clear its floating children.
 
@@ -226,7 +229,7 @@ Any margin that we add to the paragraph is being applied way off to the right of
 ```css
 div#container > ul {
   border: 1px solid black;
-} 
+}
 ```
 
 The difference between the standard X Y and X > Y is that the latter will only select direct children.
@@ -237,7 +240,7 @@ ul ~ p {
 }
 ```
 
-This sibling combinator is similar to X + Y, however, it's less strict. While an adjacent selector (ul + p) will only select the first element that is immediately preceded by the former selector, this one is more generalized. 
+This sibling combinator is similar to X + Y, however, it's less strict. While an adjacent selector (ul + p) will only select the first element that is immediately preceded by the former selector, this one is more generalized.
 It will select, referring to our example above, any p elements, as long as they follow a ul.
 
 ```css
@@ -311,7 +314,7 @@ What if you had a huge list of items in a ul, and only needed to access, say, th
 li:first-child {
     border-top: none;
 }
- 
+
 li:last-child {
    border-bottom: none;
 }
@@ -343,7 +346,7 @@ Below is the order of efficiency for selectors. IDs are the most efficient and p
 
 ## Repaints and Reflows
 
-**Repaint** 
+**Repaint**
 
 Also known as redraw - is what happens whenever something is made visible when it was not previously visible, or vice versa, without altering the layout of the document. An example would be when adding an outline to an element, changing the background color, or changing the visibility style. Repaint is expensive in terms of performance, as it requires the engine to search through all elements to determine what is visible, and what should be displayed.
 
@@ -383,9 +386,9 @@ For a comprehensive list of what forces reflows - check Paul Irish's gist [here]
 * Avoid JavaScript expressions in the CSS (IE only).
 
 **Note**
- 
+
 * Sweating over the selectors used in modern browsers is futile. Most selection methods are now so fast it’s really not worth spending much time over. Furthermore, there is disparity across browsers of what the slowest selectors are anyway. Look here last to speed up your CSS.
-* Excessive unused styles are likely to cost more, performance wise, than any selectors you chose so look to tidy up there second. 3000 lines that are unused or surplus on a page are not even that uncommon. While it’s common to bunch all the styles up into a great big single styles.css, if different areas of your site/web application can have different (additional) stylesheets added (dependency graph style), that may be the better option. 
+* Excessive unused styles are likely to cost more, performance wise, than any selectors you chose so look to tidy up there second. 3000 lines that are unused or surplus on a page are not even that uncommon. While it’s common to bunch all the styles up into a great big single styles.css, if different areas of your site/web application can have different (additional) stylesheets added (dependency graph style), that may be the better option.
 
 *More Reading*
 
@@ -457,17 +460,17 @@ text-shadow: 0 0 50px #333;
 
 Text shadows are like box shadows except that they are shadows for text rather than the whole element. Luckily, there is no vendor prefix necessary for text shadow.
 
-The options for text shadow are the same as for box-shadow except that there is *no inset* text shadow support. 
+The options for text shadow are the same as for box-shadow except that there is *no inset* text shadow support.
 
 As with box shadows, it is possible to have multiple text shadows just by separating them with commas. Here is an example that creates a flaming text effect.
 
 ```css
-text-shadow: 0 0 4px #ccc, 
-             0 -5px 4px #ff3, 
-             2px -10px 6px #fd3, 
-             -2px -15px 11px #f80, 
+text-shadow: 0 0 4px #ccc,
+             0 -5px 4px #ff3,
+             2px -10px 6px #fd3,
+             -2px -15px 11px #f80,
              2px -18px 18px #f20;
-```             
+```
 
 *Support: IE10+*
 
@@ -476,7 +479,7 @@ text-shadow: 0 0 4px #ccc,
 Just as you can declare the background of an element to be a solid color in CSS, you can also declare that background to be a gradient. Using gradients declared in CSS, rather using an actual image file, is better for control and performance.
 
 Gradients are typically one color that fades into another, but in CSS you can control every aspect of how that happens, from the direction to the colors (as many as you want) to where those color changes happen.
- 
+
 ```css
 .gradient {
   /* can be treated like a fallback */
@@ -489,7 +492,7 @@ Gradients are typically one color that fades into another, but in CSS you can co
   background: red;
   background: linear-gradient(red, orange);
 }
-``` 
+```
 
 *Support: IE10+*
 
@@ -517,13 +520,13 @@ You can also declare where you want any particular color to "start". Those are c
 * We tend to think of gradients as fading colors, but if you have two color stops that are the same, [you can make a solid color instantly change to another solid color](http://codepen.io/chriscoyier/pen/csgoD). This can be useful for declaring a full-height background that simulates columns.
 
 * There are three different syntaxes that browsers have supported:
-  
+
   - Old: original WebKit-only way, with stuff like from() and color-stop()
-  
+
   - Tweener: old angle system, e.g. "left"
-  
+
   - New: new angle system, e.g. "to right"
-  
+
 The way degrees work in the OLD vs NEW syntax is a bit different. The OLD (and TWEENER - usually prefixed) way defines 0deg and left-to-right and proceeds counter-clockwise, while the NEW (usually unprefixed) way defines 0deg as bottom-to-top and proceeds clockwise.
 
 OLD (or TWEENER) = (450 - new) % 360
@@ -546,26 +549,26 @@ The default is for the first color to start in the (center center) of the elemen
 
 The possible values for fade  are: closest-corner, closest-side, farthest-corner, farthest-side. You can think of it like: "I want this radial gradient to fade from the center point to the __________, and everywhere else fills in to accommodate that."
 A radial gradient doesn't have to start at the default center either, you can specify a certain point by using "at ______" as part of the first parameter.
-  
+
 ***Gotchas***
-  
-* There are again three different syntaxes that browsers have supported:  
-  
+
+* There are again three different syntaxes that browsers have supported:
+
   - Old: Prefixed with -webkit-, stuff like from() and color-stop()
-  
+
   - Tweener: First param was location of center. That will completely break now in browsers that support new syntax unprefixed, so make sure any tweener syntax is prefixed.
-  
+
   - New: Verbose first param, like "circle closest-corner at top right"
-  
+
 * It is recommended to used autoprefixers like [postcss](https://github.com/postcss/autoprefixer) to handle vendor prefixes to make it work across different browsers consistently.
- 
+
 ***Repeating Gradients***
- 
+
 The size of the gradient is determined by the final color stop. If that's at 20px, the size of the gradient (which then repeats) is a 20px by 20px square.
- 
+
 ```css
 .repeat {
-  background-image: 
+  background-image:
     repeating-linear-gradient(
       45deg,
       yellow,
@@ -574,21 +577,21 @@ The size of the gradient is determined by the final color stop. If that's at 20p
       red 20px /* determines size */
     );
 }
-``` 
+```
 
-They can be used with both linear and radial varieties. 
+They can be used with both linear and radial varieties.
 
-There is a trick, with non-repeating gradients, to create the gradient in such a way that if it was a little tiny rectangle, it would line up with other little tiny rectangle versions of itself to create a repeating pattern. So essentially create that gradient and set the background-size to make that little tiny rectangle. That made it easy to make stripes, which you could then rotate or whatever. 
- 
+There is a trick, with non-repeating gradients, to create the gradient in such a way that if it was a little tiny rectangle, it would line up with other little tiny rectangle versions of itself to create a repeating pattern. So essentially create that gradient and set the background-size to make that little tiny rectangle. That made it easy to make stripes, which you could then rotate or whatever.
+
 *More reading:*
- 
+
 [CSS Gradients](https://css-tricks.com/css3-gradients/)
 
 ## CSS3 Media queries
 
 CSS Media Queries are a feature in CSS3 which allows you to specify when certain CSS rules should be applied. This allows you to apply a special CSS for mobile, or adjust a layout for print.
 
-There are three ways to invoke media-query-dependent styles. 
+There are three ways to invoke media-query-dependent styles.
 
 * First of all, as stylesheets in the link element of HTML or XHTML:
 
@@ -669,13 +672,13 @@ You can use the media query min-device-width, instead of min-width, which checks
 ```css
 /* For devices smaller than 400px: */
 body {
-    background-image: url('img_smallflower.jpg'); 
+    background-image: url('img_smallflower.jpg');
 }
 
 /* For devices 400px and larger: */
 @media only screen and (min-device-width: 400px) {
-    body { 
-        background-image: url('img_flowers.jpg'); 
+    body {
+        background-image: url('img_flowers.jpg');
     }
 }
 ```
@@ -699,7 +702,7 @@ The srcset attribute is required, and defines the source of the image. The media
 * Using The width Property
 
   - If the width property is set to 100%, the video player will be responsive and scale up and down. However, it can be scaled up to be larger than its original size. A better solution, in many cases, will be to use the max-width property instead.
-  
+
   ```css
   video {
       max-width: 100%;
@@ -708,7 +711,7 @@ The srcset attribute is required, and defines the source of the image. The media
   ```
 
 *More reading:*
- 
+
 [w3schools - Responsive Web Design](http://www.w3schools.com/css/css_rwd_intro.asp)
 
 [9 basic principles of responsive web design](http://blog.froont.com/9-basic-principles-of-responsive-web-design/)
@@ -748,9 +751,9 @@ Let’s say that along with the background color, we also want to change the lin
 Another basic use of changing states is to change the background of an input box on focus.
 
 ```css
-input.ourInputBox:focus{ 
- -webkit-transition:background-color 0.5s linear; 
- background:#CCC; 
+input.ourInputBox:focus{
+ -webkit-transition:background-color 0.5s linear;
+ background:#CCC;
 }
 ```
 
@@ -767,7 +770,7 @@ This time, we put the transition declaration into the hover state, so that we ar
 While CSS transitions are all about altering element properties as they move from state to state, CSS animations are dependent on keyframes and animation properties.
 
 * keyframes: Used to define the styles an element will have at various times.
-* animation properties: Used to assign @keyframes to a specific element and determine how it is animated. 
+* animation properties: Used to assign @keyframes to a specific element and determine how it is animated.
 
 ***Keyframes***
 
@@ -860,7 +863,7 @@ To add multiple animations to a selector, you simply separate the values with a 
 
 [CSS Animation for Beginners](https://robots.thoughtbot.com/css-animation-for-beginners)
 
-[Simple CSS3 Transitions, Transforms, & Animations Compilation](http://callmenick.com/post/simple-css3-transitions-transforms-animations-compilation)  
+[Simple CSS3 Transitions, Transforms, & Animations Compilation](http://callmenick.com/post/simple-css3-transitions-transforms-animations-compilation)
 
 [Learn to Code Advanced HTML & CSS](http://learn.shayhowe.com/advanced-html-css/performance-organization/)
 
@@ -876,8 +879,8 @@ So, basically, we should always use SVG graphics instead of PNG or JPEG, when we
 
 Here's a simple red circle SVG
 ```css
-<svg width="100" height="100"> 
-    <circle cx="50" cy="50" r="40" fill="red" /> 
+<svg width="100" height="100">
+    <circle cx="50" cy="50" r="40" fill="red" />
 </svg>
 ```
 
@@ -1143,6 +1146,93 @@ There are the main ways to do it, but you can still vertically align using flexb
 [Vertical align anything with just 3 lines of CSS](http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/)
 
 [How to center in CSS](http://howtocenterincss.com/)
+
+---
+
+## Known Issues
+
+### Extra margin on inline-block elements
+Let's suppose you need to create a list and the items should be horizontally side by side horizontally,
+without any spacing between them.
+
+The code could be something like that:
+
+```html
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+```
+
+```css
+li {
+  display: inline-block;
+  background: red;
+}
+```
+
+Then, you see on the browser. Yeah, it seems to work properly, except by the extra spacing between the items.
+You don't ask for that, and, even adding `margin: 0` in the code, the problem is still there.
+
+The problem occurs because when you use display inline-block, the whitespace in the HTML becomes
+a visual space on the browser.
+
+So, let's take a look in some ways to solve that:
+
+#### No spaces in the HTML
+So, if the whitespace is the problem, let's remove it.
+
+```html
+  <ul>
+    <li>Item 1</li><li>Item 2</li><li>Item 3</li>
+  </ul>
+```
+#### Comments in the HTML
+It works like the previous solution, but instead you literally remove the whitespaces,
+you use comments to do that.
+
+```html
+<ul>
+   <li>Item content</li><!--
+--><li>Item content</li><!--
+--><li>Item content</li>
+</ul>
+```
+
+#### font-size: 0 on parent element
+You just add font-size: 0, on their parent which will remove the whitespaces,
+and then you set the right font size on inline block element.
+
+```css
+ ul {
+   font-size: 0;
+ }
+
+ li {
+   display: inline-block;
+   background: red;
+   font-size: 14px;
+ }
+```
+
+#### Negative margin on inline block elements
+Pretty clear, the extra margin rendered is 4px, so, let's add a 4px of negative margin in the element.
+
+```css
+li {
+  display: inline-block;
+  margin: 0 -4px;
+}
+```
+
+*More reading:*
+
+[Fighting the Space Between Inline Block Elements](https://css-tricks.com/fighting-the-space-between-inline-block-elements/)
+
+[Remove Whitespace Between Inline-Block Elements](http://davidwalsh.name/remove-whitespace-inline-block)
+
+[CSS display inline-block Extra Margin/Space](https://tylercipriani.com/2012/08/01/display-inline-block-extra-margin.html)
 
 ---
 
