@@ -1243,3 +1243,5 @@ li {
 [CSS3 Mastery](http://code.tutsplus.com/series/css3-mastery--net-18126)
 
 [Getting to Work with CSS3 Power Tools](http://code.tutsplus.com/tutorials/getting-to-work-with-css3-power-tools--net-13894)
+
+[CSS pro tips](https://github.com/AllThingsSmitty/css-protips)
