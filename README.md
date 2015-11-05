@@ -99,7 +99,9 @@ div {
 * If floated left or right, will automatically become a block-level element, subject to all block characteristics.
 
 **Inline Block:**
-* Very similar to inline in that it will set inline with the natural flow of text.
+* Very similar to inline to its parents in that it will set inline with the natural flow of text.
+* Very similar to block to its children in that it can have a width and height and its content can move vertically.
+* Think of a display:block element that has been rendered (or converted to an image) and then placed in the document inline
 * Margin and paddings work properly.
 * Width and height will be respected.
 * There is a "bug" which causes extra margin in inline block elements. See on [Known Issues](#extra-margin-on-inline-block-elements)
@@ -126,6 +128,7 @@ div {
 ```css
 div {
   display: table;
+  display: inline-table; /* like a table inside an inline-block */
   display: table-cell;
   display: table-column;
   display: table-colgroup;
@@ -154,12 +157,14 @@ div {
 * A flex container expands items to fill available free space, or shrinks them to prevent overflow.
 * Most importantly, the flexbox layout is direction-agnostic as opposed to the regular layouts (block which is vertically-based and inline which is horizontally-based).
 * Flexbox layout is most appropriate to the components of an application, and small-scale layouts, while the Grid layout is intended for larger scale layouts.
+* As with inline-block and inline-table, there is also inline-flex.
 
 **Grid:**
 * The grid property in CSS is the foundation of Grid Layout. It aims at fixing issues with older layout techniques like float and inline-block, which both have issues and weren't really designed for page layout.
 * Method of using a grid concept to lay out content, providing a mechanism for authors to divide available space for lay out into columns and rows using a set of predictable sizing behaviors.
 * Along with the fact this method fixes the issues we encounter with older layout techniques, its main benefit is you can display a page in a way which can differ from the flow order.
 * Not much support. Currently only IE 10+ (no Chrome/Firefox etc.)
+* As with inline-block and inline-table, there is also inline-grid.
 
 *More reading:*
 
