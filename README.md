@@ -168,6 +168,8 @@ div {
 
 *More reading:*
 
+[Flexbox Froggy](http://flexboxfroggy.com/)
+
 [CSS Almanac: Display](https://css-tricks.com/almanac/properties/d/display/)
 
 [The Difference Between “Block” and “Inline”](http://www.impressivewebs.com/difference-block-inline-css/)
