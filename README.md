@@ -652,7 +652,7 @@ The initial-scale=1.0 part sets the initial zoom level when the page is first lo
 
 A responsive grid-view often has 12 columns, and has a total width of 100%, and will shrink and expand as you resize the browser window.
 
-First ensure that all HTML elements have the box-sizing property set to border-box. This makes sure that the padding and border are included in the total width and height of the elements.
+First ensure that all HTML elements have the [box-sizing](https://css-tricks.com/box-sizing/) property set to border-box. This makes sure that the padding and border are included in the total width and height of the elements.
 
 Add the following code in your CSS:
 
