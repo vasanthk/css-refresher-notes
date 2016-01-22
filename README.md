@@ -107,7 +107,7 @@ div {
 * There is a "bug" which causes extra margin in inline block elements. See on [Known Issues](#extra-margin-on-inline-block-elements)
 
 **Block:**
-* A number of elements are set to block by the browser US stylesheet. They are usually container elements such as div, section and ul. Also text 'blocks' like p and h1.
+* A number of elements are set to block by the browser UA stylesheet. They are usually container elements such as div, section and ul. Also text 'blocks' like p and h1.
 * Block level elements do not sit inline, but break past them. If no width is set, will expand naturally to fill its parent container.
 * Can have margins and/or padding.
 * If no height is set, will expand naturally to fit its child elements (assuming they are not floated or positioned). So, for a block element, it’s not necessary to give it a set width or to give it a width of 100%.
