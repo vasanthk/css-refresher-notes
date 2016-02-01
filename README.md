@@ -189,7 +189,7 @@ such as the paragraph in the example above. Most of the time, this gives the des
 * Collapsing is when a parent element that contains any number of floated elements doesn’t expand to completely surround those elements in the way it would if the elements were not floated.
 * There is a method that allows a parent element to clear itself of any floated elements inside it. It uses a CSS property called overflow with a value of hidden.
 Note that the overflow property was not intended for this type of use, and could cause some issues such as hiding content or causing unwanted scrollbars to appear.
-* Trick: For clearing floats adding a ‘overflow:auto’ to the parent element also does the trick.
+* **Trick: For clearing floats adding a ‘overflow:auto’ to the parent element also does the trick.**
 * Note that overflow: auto doesn't clear floats — it causes the element to contain its floats by way of establishing a new block formatting context for them so that they don't intrude to other elements in the parent context.
 That is what forces the parent to stretch to contain them. You can only clear a float if you add a clearing element after the float. A parent element cannot clear its floating children.
 
