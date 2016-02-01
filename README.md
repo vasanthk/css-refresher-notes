@@ -1102,6 +1102,7 @@ Sadly this method does not work with older versions of Internet Explorer.
 This method has two ways to be implemented:
 
 1 - If you know the height of the element you want to align
+
 2 - If you don't know this height (only works if you can use CSS3)
 
 Let's say you have the following HTML:
