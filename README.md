@@ -666,7 +666,8 @@ Add the following code in your CSS:
 
 ***Responsive Images***
 
-Images will be responsive and scale up and down if the width property is set to 100%. A better option would be to set max-width property to 100%m since the image will scale down if it has to, but never scale up to be larger than its original size.
+Images will be responsive and scale up and down if the width property is set to 100%. 
+**A better option would be to set max-width property to 100% since the image will scale down if it has to, but never scale up to be larger than its original size.**
 
 Background images can also respond to resizing and scaling.
 
