@@ -66,7 +66,7 @@ div {
 
 **Gotchas:**
 * You can’t apply both the position property and the float property to the same element. Both are conflicting instructions for what positioning scheme to use. If an element has both float and position:absolute or fixed, the float property won't apply.
-* Margins don’t collapse on absolutely positioned elements. Suppose you have a paragraph with a margin-bottom of 20px applied. Right below the paragraph is an image with a margin-top of 30px applied. The space between the paragraph and the image will not be 50px (20px + 30px), but rather 30px (30px > 20px). This is known as collapsing margins. The two margins combine (or collapse) to become one margin. Absolutely positioned elements do not have margins that collapse, which might make them act differently than expected.
+* Margins don’t [collapse](http://www.sitepoint.com/web-foundations/collapsing-margins/) on absolutely positioned elements. Suppose you have a paragraph with a margin-bottom of 20px applied. Right below the paragraph is an image with a margin-top of 30px applied. The space between the paragraph and the image will not be 50px (20px + 30px), but rather 30px (30px > 20px). This is known as collapsing margins. The two margins combine (or collapse) to become one margin. Absolutely positioned elements do not have margins that collapse, which might make them act differently than expected.
 
 *More reading:*
 
@@ -77,7 +77,7 @@ div {
 [Learn CSS Positioning in Ten Steps](http://www.barelyfitz.com/screencast/html-training/css/positioning/)
 
 ##Display
-Every element on a web page is a rectangular box. The display property in CSS determines just how that rectangular box behaves.
+Every element on a web page is a rectangular [box](http://www.sitepoint.com/web-foundations/css-box-model/). The display property in CSS determines just how that rectangular box behaves.
 
 ```css
 div {
