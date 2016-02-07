@@ -337,8 +337,15 @@ This is particularly useful when assigning border and padding/margin styles for 
 
 ## Selector efficiency
 
-Below is the order of efficiency for selectors. IDs are the most efficient and pseudo classes and pseudo elements are the least efficient.
+The following list of selectors is in decreasing order of specificity:
+* ID selectors (e.g., #example).
+* Class selectors (e.g., .example), attributes selectors (e.g., [type="radio"]) and pseudo-classes (e.g., :hover).
+* Type selectors (e.g., h1) and pseudo-elements (e.g., :before).
+* Universal selector (*), combinators (+, >, ~, ' ') and negation pseudo-class (:not()) have no effect on specificity. (The selectors declared inside :not() do, however.)
 
+Inline styles added to an element (e.g., style="font-weight:bold") always overwrite any styles in external stylesheets and thus can be thought of as having the highest specificity.
+
+Below is a longer list:
 * id (#myid)
 * class (.myclass)
 * tag (div, h1, p)
