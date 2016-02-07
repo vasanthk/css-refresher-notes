@@ -47,7 +47,7 @@ div {
 
 **Absolute:**
 * Position absolute takes the element out of the document flow. This means that it no longer takes up any space like what static and relative does. Think of it as an element with a giant strip of velcro on its back. Just tell it where to stick and it sticks.
-* You use the positioning attributes top, left, bottom and right to set the location. Remember that these values will be relative to the next parent element with relative (or absolute) positioning. If there is no such parent, it will default all the way back up to the <html> element itself meaning it will be placed relatively to the page itself.
+* You use the positioning attributes top, left, bottom and right to set the location. Remember that these values will be relative to the next parent element with relative (or absolute) positioning. If there is no such parent, it will default all the way back up to the html element itself meaning it will be placed relatively to the page itself.
 * The trade-off, and most important thing to remember, about absolute positioning is that these elements are removed from the flow of elements on the page. An element with this type of positioning is not affected by other elements and it doesn't affect other elements.
 
 **Fixed:**
@@ -643,7 +643,7 @@ There are currently 13 media features catered for in the specification: width, h
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
 
-A <meta> viewport element gives the browser instructions on how to control the page's dimensions and scaling.
+A meta viewport element gives the browser instructions on how to control the page's dimensions and scaling.
 
 The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
 
@@ -700,9 +700,9 @@ body {
 }
 ```
 
-HTML5 introduced the <picture> element, which lets you define more than one image. (No IE support :(  .. only Edge 13+)
+HTML5 introduced the picture element, which lets you define more than one image. (No IE support :(  .. only Edge 13+)
 
-The <picture> element works similar to the <video> and <audio> elements. You set up different sources, and the first source that fits the preferences is the one being used:
+The picture element works similar to the video and audio elements. You set up different sources, and the first source that fits the preferences is the one being used:
 
 ```css
 <picture>
@@ -712,7 +712,7 @@ The <picture> element works similar to the <video> and <audio> elements. You set
 </picture>
 ```
 
-The srcset attribute is required, and defines the source of the image. The media attribute is optional, and accepts the media queries you find in CSS @media rule. You should also define an <img> element for browsers that do not support the <picture> element (good fallback option).
+The srcset attribute is required, and defines the source of the image. The media attribute is optional, and accepts the media queries you find in CSS @media rule. You should also define an img element for browsers that do not support the picture element (good fallback option).
 
 ***Responsive Videos***
 
@@ -918,7 +918,7 @@ Each SVG shape (element) has some basic parameters:
   - Small size. SVG image elements take up much less space than their twins created in raster format.
   - Flexibility. With CSS, you can quickly change the graphics settings on the site, such as background color or the position of the logo on the page. To do this, you can edit the file in any text editor.
   - It’s possible to view the contents of the SVG file in any browser (IE, Chrome, Opera, FireFox, Safari, etc.).
-  - No unnecessary HTTP requests, unlike using an <img> tag
+  - No unnecessary HTTP requests, unlike using an img tag
   - SEO friendly: text labels, descriptions can be searched by search engines.
   - We have scripting control for custom interactive events and animation.
 
