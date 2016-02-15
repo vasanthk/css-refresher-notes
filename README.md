@@ -1256,6 +1256,8 @@ li {
 
 *CSS Links*
 
+[CSS for Devs - Slides](http://elijahmanor.com/talks/css-for-devs/#/)
+
 [5 Steps to Drastically Improve Your CSS Knowledge in 24 Hours](http://designshack.net/articles/css/5-steps-to-drastically-improve-your-css-knowledge-in-24-hours/)
 
 [CSS3 Mastery](http://code.tutsplus.com/series/css3-mastery--net-18126)
