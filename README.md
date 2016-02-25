@@ -241,6 +241,8 @@ Any margin that we add to the paragraph is being applied way off to the right of
 
 [CSS Floats 101](http://alistapart.com/article/css-floats-101)
 
+[Clearing Floats](http://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/)
+
 ## CSS Selectors
 
 ```css
