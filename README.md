@@ -66,7 +66,7 @@ div {
 
 **Gotchas:**
 * You can’t apply both the position property and the float property to the same element. Both are conflicting instructions for what positioning scheme to use. If an element has both float and position:absolute or fixed, the float property won't apply.
-* Margins don’t [collapse](http://www.sitepoint.com/web-foundations/collapsing-margins/) on absolutely positioned elements. Suppose you have a paragraph with a margin-bottom of 20px applied. Right below the paragraph is an image with a margin-top of 30px applied. 
+* Margins don’t [collapse](http://www.sitepoint.com/web-foundations/collapsing-margins/) on absolutely positioned elements. Suppose you have a paragraph with a margin-bottom of 20px applied. Right below the paragraph is an image with a margin-top of 30px applied.
 The space between the paragraph and the image will not be 50px (20px + 30px), but rather 30px (30px > 20px). This is known as collapsing margins. The simplest way to stop the margin collapse from occurring is to add padding or borders to each element.
 The two margins combine (or collapse) to become one margin. Absolutely positioned elements do not have margins that collapse, which might make them act differently than expected.
 
@@ -689,7 +689,7 @@ Add the following code in your CSS:
 
 ***Responsive Images***
 
-Images will be responsive and scale up and down if the width property is set to 100%. 
+Images will be responsive and scale up and down if the width property is set to 100%.
 **A better option would be to set max-width property to 100% since the image will scale down if it has to, but never scale up to be larger than its original size.**
 
 Background images can also respond to resizing and scaling.
@@ -1018,7 +1018,7 @@ You set the same background-image on several CSS classes and set the background 
 
 ## Vertical Alignment
 
-Vertical alignment is one of the main reasons some people think CSS is confusing. You wonder, I guess, why is it so *hard* to align content vertically with CSS? Why don't they create a property that does it automatically? _Why does `vertical-align` not work form me?!_
+Vertical alignment is one of the main reasons some people think CSS is confusing. You wonder, I guess, why is it so *hard* to align content vertically with CSS? Why don't they create a property that does it automatically? _Why does `vertical-align` not work for me?!_
 
 About the `vertical-align` question: this property is only for aligning inline or table-cell elements, hope it ends your doubt about it.
 
@@ -1186,7 +1186,7 @@ There are the main ways to do it, but you can still vertically align using flexb
 ## Known Issues
 
 ### Extra margin on inline-block elements
-Let's suppose you need to create a list and the items should be horizontally side by side horizontally,
+Let's suppose you need to create a list and the items should be side by side horizontally,
 without any spacing between them.
 
 The code could be something like that:
