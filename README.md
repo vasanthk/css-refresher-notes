@@ -95,7 +95,7 @@ div {
 
 **Inline:**
 * Default value for elements. Think of elements like span, b or em
-* Will ignore top and bottom margin/padding settings, but will apply left and right margin/padding. Only moves horizontally, not vertically.
+* Will ignore top and bottom margin settings, but will apply left and right margin. Only moves horizontally, not vertically.
 * Is subject to vertical-align property.
 * Will ignore width and height properties.
 * If floated left or right, will automatically become a block-level element, subject to all block characteristics.
