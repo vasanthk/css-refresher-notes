@@ -78,7 +78,7 @@ The two margins combine (or collapse) to become one margin. Absolutely positione
 
 [Learn CSS Positioning in Ten Steps](http://www.barelyfitz.com/screencast/html-training/css/positioning/)
 
-##Display
+## Display
 Every element on a web page is a rectangular [box](http://www.sitepoint.com/web-foundations/css-box-model/). The display property in CSS determines just how that rectangular box behaves.
 
 ```css
