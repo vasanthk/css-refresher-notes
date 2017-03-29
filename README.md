@@ -974,7 +974,7 @@ Each SVG shape (element) has some basic parameters:
 
 ​A CSS sprite is a performance optimization technique that combines multiple images into a single image called a sprite sheet or tile set. Sprites reduce network congestion by reducing the number of downloads needed to render a web page.
 
-While combining several images into one with sprites, all images are loaded with a single HTTP request. Browsers limit the number of concurrent requests a site can make and HTTP requests require a bit of handshaking. Thus, sprites are important for the same reasons that minifying and concatinating CSS and JavaScript are important.
+While combining several images into one with sprites, all images are loaded with a single HTTP request. Browsers limit the number of concurrent requests a site can make and HTTP requests require a bit of handshaking. Thus, sprites are important for the same reasons that minifying and concatenating CSS and JavaScript are important.
 
 **Using Sprites in CSS**
 
