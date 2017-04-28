@@ -178,6 +178,8 @@ div {
 
 *More reading:*
 
+[Grid Garden](http://cssgridgarden.com/)
+
 [CSS Almanac: Display](https://css-tricks.com/almanac/properties/d/display/)
 
 [The Difference Between “Block” and “Inline”](http://www.impressivewebs.com/difference-block-inline-css/)
