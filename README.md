@@ -178,6 +178,8 @@ div {
 
 *More reading:*
 
+[A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
 [Grid Garden](http://cssgridgarden.com/)
 
 [CSS Almanac: Display](https://css-tricks.com/almanac/properties/d/display/)
