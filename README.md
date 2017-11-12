@@ -32,6 +32,7 @@ div {
   position: relative;
   position: absolute;
   position: fixed;
+  position: sticky;
   position: inherit; /* Not very common */
 }
 ```
@@ -55,6 +56,11 @@ div {
 * The element is positioned relative to the viewport, or the browser window itself.
 * Major difference with position absolute is it always takes its positioning relative to the browser window.
 * Since the fixed value behaves similar to the absolute value, we can stretch the width of the element to fit the viewport by setting offset values for left and right to zero.
+
+**Sticy:**
+* This is a hybrid of relative and fixed positioning.
+* The element is treated as relative positioned until it crosses a specified threshold, at which point it is treated as fixed positioning.
+* For more info, find the demo from the MDN (https://codepen.io/simevidas/pen/JbdJRZ)
 
 **Inherits:**
 * It works as the name implies: The element inherits the value of its parent element. Typically, position property elements do not naturally inherit their parent’s values—the static value is assigned if no position value is given. Ultimately, you can type inherit or the parent element’s value and get the same result.
