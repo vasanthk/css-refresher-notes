@@ -420,7 +420,7 @@ For a comprehensive list of what forces reflows - check Paul Irish's gist [here]
 
 **How to minimize the effect of reflows on performance**
 
-* Change classes on the element you wish to styles (as low in the DOM tree as possible).
+* Change classes on the element you wish to style (as low in the DOM tree as possible).
 * Avoid setting multiple inline styles.
 * Apply animations to elements that are position fixed or absolute.
 * Trade smoothness for speed.
