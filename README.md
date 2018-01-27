@@ -179,7 +179,7 @@ div {
 * The grid property in CSS is the foundation of Grid Layout. It aims at fixing issues with older layout techniques like float and inline-block, which both have issues and weren't really designed for page layout.
 * Method of using a grid concept to lay out content, providing a mechanism for authors to divide available space for lay out into columns and rows using a set of predictable sizing behaviors.
 * Along with the fact this method fixes the issues we encounter with older layout techniques, its main benefit is you can display a page in a way which can differ from the flow order.
-* Not much support. Currently only IE 10+ (no Chrome/Firefox etc.)
+* An older deprecated version of the spec is implemented in IE10/11. The current version of the spec is present in all other modern browsers (Chrome, Safari, Firefox, and Edge 16+).
 * As with inline-block and inline-table, there is also inline-grid.
 
 *More reading:*
