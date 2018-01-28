@@ -57,7 +57,7 @@ div {
 * Major difference with position absolute is it always takes its positioning relative to the browser window.
 * Since the fixed value behaves similar to the absolute value, we can stretch the width of the element to fit the viewport by setting offset values for left and right to zero.
 
-**Sticy:**
+**Sticky:**
 * This is a hybrid of relative and fixed positioning.
 * The element is treated as relative positioned until it crosses a specified threshold, at which point it is treated as fixed positioning.
 * For more info, find the demo from the MDN (https://codepen.io/simevidas/pen/JbdJRZ)
@@ -420,7 +420,7 @@ For a comprehensive list of what forces reflows - check Paul Irish's gist [here]
 
 **How to minimize the effect of reflows on performance**
 
-* Change classes on the element you wish to styles (as low in the DOM tree as possible).
+* Change classes on the element you wish to style (as low in the DOM tree as possible).
 * Avoid setting multiple inline styles.
 * Apply animations to elements that are position fixed or absolute.
 * Trade smoothness for speed.
