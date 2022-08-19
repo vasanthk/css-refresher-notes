@@ -361,6 +361,8 @@ This is particularly useful when assigning border and padding/margin styles for 
 
 [The 30 CSS Selectors you Must Memorize](http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048)
 
+[What is a Universal Selector in CSS?](https://www.scaler.com/topics/universal-selector-in-css/)
+
 ## Selector efficiency
 
 The following list of selectors is in decreasing order of specificity:
