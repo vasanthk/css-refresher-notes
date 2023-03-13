@@ -914,6 +914,9 @@ To add multiple animations to a selector, you simply separate the values with a 
 
 [Learn to Code Advanced HTML & CSS](http://learn.shayhowe.com/advanced-html-css/performance-organization/)
 
+[Advanced HTML - CSS](https://skillcrush.com/blog/advanced-css/)
+
+
 ## Scalable Vector Graphics (SVG)
 
 SVG stands for scalable vector graphics. It is an XML-based format that supports animation and interactivity.
